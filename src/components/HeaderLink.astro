@@ -10,7 +10,7 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 ---
 
 <li>
-	<a href={href} class:list={[
+	<a href={`${import.meta.env.BASE_URL}${href === '/' ? '' : href}`} class:list={[
 		className,
 		{ active: isActive },
 		'transition-colors duration-200 hover:bg-base-200'
