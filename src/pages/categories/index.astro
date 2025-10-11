@@ -1,0 +1,116 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const allPosts = await getCollection('blog');
+
+// Get all unique categories from posts
+const allCategories = [...new Set(allPosts.flatMap(post => post.data.categories || []))].sort();
+
+// Group posts by category
+const postsByCategory = allCategories.reduce((acc, category) => {
+  acc[category] = allPosts.filter(post =>
+    post.data.categories && post.data.categories.includes(category)
+  ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return acc;
+}, {} as Record<string, typeof allPosts>);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Categories | ${SITE_TITLE}`} description={`Browse articles by category | ${SITE_DESCRIPTION}`} />
+		<style>
+			.categories-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 1rem;
+			}
+
+			.category-card {
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.category-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+			}
+
+			.category-badge {
+				display: inline-block;
+				background: hsl(var(--p));
+				color: hsl(var(--pc));
+				padding: 0.25rem 0.75rem;
+				border-radius: 9999px;
+				font-size: 0.875rem;
+				font-weight: 500;
+				margin-bottom: 0.5rem;
+			}
+
+			.post-count {
+				color: hsl(var(--s));
+				font-size: 0.875rem;
+			}
+
+			@media (max-width: 768px) {
+				.categories-container {
+					padding: 0 0.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+
+		<!-- Categories Section -->
+		<section class="bg-base-200 py-16">
+			<div class="categories-container">
+				<div class="text-center mb-12">
+					<h1 class="text-4xl md:text-5xl font-bold mb-4">Categories</h1>
+					<p class="text-xl text-base-content/70 max-w-2xl mx-auto">
+						Explore articles organized by topics and interests
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{allCategories.map((category) => {
+						const posts = postsByCategory[category];
+						const postCount = posts.length;
+
+						return (
+							<div class="card bg-base-100 shadow-lg category-card">
+								<div class="card-body">
+									<div class="category-badge">
+										{category}
+									</div>
+									<h3 class="card-title text-2xl mb-2">
+										{category.charAt(0).toUpperCase() + category.slice(1)}
+									</h3>
+									<p class="text-base-content/70 mb-4">
+										{postCount} article{postCount !== 1 ? 's' : ''} in this category
+									</p>
+									<div class="card-actions justify-end">
+										<a href={`${import.meta.env.BASE_URL}categories/${category}/`} class="btn btn-primary btn-sm">
+											View Articles →
+										</a>
+									</div>
+								</div>
+							</div>
+						);
+					})}
+				</div>
+
+				{allCategories.length === 0 && (
+					<div class="text-center py-12">
+						<p class="text-base-content/70 text-lg">No categories found.</p>
+					</div>
+				)}
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

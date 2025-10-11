@@ -1,0 +1,172 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+export async function getStaticPaths() {
+	const allPosts = await getCollection('blog');
+	const allCategories = [...new Set(allPosts.flatMap(post => post.data.categories || []))];
+
+	return allCategories.map((category) => ({
+		params: { category },
+		props: { category },
+	}));
+}
+
+const { category } = Astro.props;
+
+const allPosts = await getCollection('blog');
+const filteredPosts = allPosts
+	.filter(post => post.data.categories && post.data.categories.includes(category))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`${capitalizedCategory} Articles | ${SITE_TITLE}`}
+			description={`Browse all articles in the ${category} category | ${SITE_DESCRIPTION}`}
+		/>
+		<style>
+			.category-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 1rem;
+			}
+
+			.category-header {
+				text-align: center;
+				margin-bottom: 3rem;
+			}
+
+			.category-badge {
+				display: inline-block;
+				background: hsl(var(--p));
+				color: hsl(var(--pc));
+				padding: 0.5rem 1.5rem;
+				border-radius: 9999px;
+				font-size: 1rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+				text-transform: lowercase;
+			}
+
+			.article-card {
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				height: 100%;
+			}
+
+			.article-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+			}
+
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				color: hsl(var(--p));
+				text-decoration: none;
+				margin-bottom: 2rem;
+				transition: color 0.2s ease;
+			}
+
+			.back-link:hover {
+				color: hsl(var(--p));
+				opacity: 0.8;
+			}
+
+			@media (max-width: 768px) {
+				.category-container {
+					padding: 0 0.5rem;
+				}
+
+				.category-header h1 {
+					font-size: 2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+
+		<!-- Category Section -->
+		<section class="bg-base-200 py-16">
+			<div class="category-container">
+				<!-- Back to categories link -->
+				<a href={`${import.meta.env.BASE_URL}categories/`} class="back-link">
+					← Back to Categories
+				</a>
+
+				<!-- Category Header -->
+				<div class="category-header">
+					<div class="category-badge">{category}</div>
+					<h1 class="text-4xl md:text-5xl font-bold mb-4">
+						{capitalizedCategory} Articles
+					</h1>
+					<p class="text-xl text-base-content/70">
+						{filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} in this category
+					</p>
+				</div>
+
+				<!-- Articles Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{filteredPosts.map((post) => (
+						<div class="card bg-base-100 shadow-lg article-card">
+							{post.data.heroImage && (
+								<figure class="px-4 pt-4">
+									<Image
+										width={400}
+										height={200}
+										src={post.data.heroImage}
+										alt={post.data.title}
+										class="rounded-xl w-full h-48 object-cover"
+									/>
+								</figure>
+							)}
+							<div class="card-body">
+								<h3 class="card-title text-xl mb-2">
+									{post.data.title}
+								</h3>
+								<p class="text-base-content/70 text-sm mb-3">
+									<FormattedDate date={post.data.pubDate} />
+								</p>
+								<p class="text-base-content/80 leading-relaxed mb-4">
+									{post.data.description}
+								</p>
+								<div class="card-actions justify-between items-center">
+									<div class="flex flex-wrap gap-1">
+										{post.data.categories?.map((cat: string) => (
+											<span class="badge badge-outline badge-sm">{cat}</span>
+										))}
+									</div>
+									<a href={`${import.meta.env.BASE_URL}/${post.id}/`} class="btn btn-primary btn-sm">
+										Read more →
+									</a>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+
+				{filteredPosts.length === 0 && (
+					<div class="text-center py-12">
+						<p class="text-base-content/70 text-lg mb-4">No articles found in this category.</p>
+						<a href={`${import.meta.env.BASE_URL}categories/`} class="btn btn-primary">
+							← Back to Categories
+						</a>
+					</div>
+				)}
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>
