@@ -2,7 +2,7 @@
 title: 'Fuzzy Logic vs Neural Networks: A Comprehensive Comparison'
 description: 'Understanding the fundamental differences between fuzzy logic systems and neural networks, their histories, applications, and how they complement each other in modern AI systems'
 pubDate: '2025-01-18'
-heroImage: '../../assets/2025/10/US-and-China-researching-AI.png'
+heroImage: '../../assets/2025/10/ai-brain.png'
 categories: ['ai', 'control-systems', 'fuzzy-logic', 'neural-networks', 'machine-learning']
 ---
 
@@ -119,16 +119,12 @@ A Fuzzy Logic system processes information through a structured four-step approa
 
 ```mermaid
 flowchart TD
-    A[Crisp Input<br>e.g., Temperature 32°C] --> B[Fuzzification<br>Convert to fuzzy sets<br>Membership Functions]
-
-    B --> C[Rule Evaluation<br>Apply IF-THEN rules<br>Inference Engine]
-
-    C --> D[Aggregation<br>Combine rule outputs<br>Fuzzy Output Sets]
-
-    D --> E[Defuzzification<br>Convert to crisp output<br>Centroid Method]
-
-    F[Membership Functions<br>Define linguistic terms] --> B
-    G[Rule Base<br>Expert knowledge] --> C
+    A[Crisp Input<br/>e.g., Temperature 32°C] --> B[Fuzzification<br/>Convert to fuzzy sets<br/>Membership Functions]
+    B --> C[Rule Evaluation<br/>Apply IF-THEN rules<br/>Inference Engine]
+    C --> D[Aggregation<br/>Combine rule outputs<br/>Fuzzy Output Sets]
+    D --> E[Defuzzification<br/>Convert to crisp output<br/>Centroid Method]
+    F[Membership Functions<br/>Define linguistic terms] --> B
+    G[Rule Base<br/>Expert knowledge] --> C
 ```
 
 ## Step-by-Step Process Explanation
@@ -165,13 +161,12 @@ flowchart TD
 ### Basic Structure
 ```mermaid
 graph LR
-    A[Input Layer<br>Features] --> B[Hidden Layer 1<br>Processing]
-    B --> C[Hidden Layer 2<br>Pattern Recognition]
-    C --> D[Output Layer<br>Predictions]
-
-    E[Training Data<br>Labeled Examples] --> F[Forward Pass<br>Make Predictions]
-    F --> G[Loss Calculation<br>Compare with Truth]
-    G --> H[Backpropagation<br>Update Weights]
+    A[Input Layer<br/>Features] --> B[Hidden Layer 1<br/>Processing]
+    B --> C[Hidden Layer 2<br/>Pattern Recognition]
+    C --> D[Output Layer<br/>Predictions]
+    E[Training Data<br/>Labeled Examples] --> F[Forward Pass<br/>Make Predictions]
+    F --> G[Loss Calculation<br/>Compare with Truth]
+    G --> H[Backpropagation<br/>Update Weights]
 ```
 
 ### Learning Process
@@ -249,3 +244,6 @@ Modern AI systems often combine both approaches to leverage their complementary 
 Fuzzy Logic and Neural Networks represent two fundamentally different approaches to artificial intelligence, each with distinct strengths and ideal applications. Rather than competitors, they serve as complementary technologies that, when combined, offer the best of both worlds: the learning power of neural networks and the interpretability of fuzzy logic.
 
 The future lies not in choosing one over the other, but in developing increasingly sophisticated hybrid systems that leverage the unique advantages of both approaches to solve complex real-world problems more effectively than either could alone.
+
+---
+*Researched on DeepSeek*
