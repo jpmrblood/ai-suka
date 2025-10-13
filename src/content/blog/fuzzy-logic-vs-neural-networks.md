@@ -5,6 +5,7 @@ pubDate: '2025-01-18'
 heroImage: '../../assets/2025/10/ai-brain.png'
 categories: ['ai', 'control-systems', 'fuzzy-logic', 'neural-networks', 'machine-learning']
 ---
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" integrity="sha256-B+N9+pezN8zIU2XVft35m5cG8J2ztZsmDQMzsjs0PEs=" crossorigin="anonymous"></script>
 
 # Executive Summary
 
@@ -117,7 +118,7 @@ A Neural Network is a computing system inspired by biological neural networks, d
 
 A Fuzzy Logic system processes information through a structured four-step approach:
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     A[Crisp Input<br/>e.g., Temperature 32°C] --> B[Fuzzification<br/>Convert to fuzzy sets<br/>Membership Functions]
     B --> C[Rule Evaluation<br/>Apply IF-THEN rules<br/>Inference Engine]
@@ -125,7 +126,7 @@ flowchart TD
     D --> E[Defuzzification<br/>Convert to crisp output<br/>Centroid Method]
     F[Membership Functions<br/>Define linguistic terms] --> B
     G[Rule Base<br/>Expert knowledge] --> C
-```
+</div>
 
 ## Step-by-Step Process Explanation
 
@@ -159,7 +160,7 @@ flowchart TD
 ## Neural Network Architecture
 
 ### Basic Structure
-```mermaid
+<div class="mermaid">
 graph LR
     A[Input Layer<br/>Features] --> B[Hidden Layer 1<br/>Processing]
     B --> C[Hidden Layer 2<br/>Pattern Recognition]
@@ -167,7 +168,7 @@ graph LR
     E[Training Data<br/>Labeled Examples] --> F[Forward Pass<br/>Make Predictions]
     F --> G[Loss Calculation<br/>Compare with Truth]
     G --> H[Backpropagation<br/>Update Weights]
-```
+</div>
 
 ### Learning Process
 1. **Forward Pass:** Input flows through network to generate prediction
