@@ -1,7 +1,7 @@
 ---
 title: 'Fuzzy Logic vs Neural Networks: A Comprehensive Comparison'
 description: 'Understanding the fundamental differences between fuzzy logic systems and neural networks, their histories, applications, and how they complement each other in modern AI systems'
-pubDate: '2025-01-18'
+pubDate: '2025-10-13'
 heroImage: '../../assets/2025/10/ai-brain.png'
 categories: ['ai', 'control-systems', 'fuzzy-logic', 'neural-networks', 'machine-learning']
 ---
