@@ -163,4 +163,5 @@ Parameters - MarkTechPost](https://www.marktechpost.com/2025/07/01/baidu-open-so
 
 - [\[21\]](https://concordia-ai.com/wp-content/uploads/2024/05/State-of-AI-Safety-in-China-Spring-2024-Report-public.pdf#:~:text=Chinese%20researchers%20are%20showing%20interest,various%20frontier%20AI%20safety%20research)
 [State of AI Safety in China Spring 2024 Report (Website PDF)](https://concordia-ai.com/wp-content/uploads/2024/05/State-of-AI-Safety-in-China-Spring-2024-Report-public.pdf)
-
+---
+*This article was researched on ChatGPT with Deep Research mode*
