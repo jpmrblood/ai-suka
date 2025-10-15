@@ -4,7 +4,7 @@ description: "Learn how to go from zero knowledge to building functional feature
 pubDate: "2025-10-15"
 tags: ["productivity", "learning", "ai-agents", "framework", "development"]
 categories: ["prompt-engineering"]
-heroImage: "../../assets/2025/10/ai-brain.png"
+heroImage: "../../assets/2025/10/prompt-engineering.png"
 ---
 
 Going from no experience with a new technology to shipping functional features can seem impossible when tools evolve constantly. This three-step framework enables developers to build with any new technology in under 20 minutes.
