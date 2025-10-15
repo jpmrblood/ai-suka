@@ -3,7 +3,8 @@ title: 'AI Research Focus: United States vs China'
 description: 'A comprehensive comparison of AI research priorities, government regulations, commercial applications, and training data strategies between the United States and China'
 pubDate: '2025-10-12'
 heroImage: '../../assets/2025/10/US-and-China-researching-AI.png'
-categories: ['ai', 'research', 'technology', 'policy']
+tags: ['ai', 'research', 'technology', 'policy']
+categories: ['research']
 ---
 
 # Executive Summary

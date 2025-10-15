@@ -3,7 +3,8 @@ title: 'Prompt Engineering Cheat-Sheet: A Complete Guide to Better AI Results'
 description: 'A comprehensive prompt engineering cheatsheet drawing from IBM techniques and best practices to help you write better prompts and get more reliable AI results'
 pubDate: '2025-10-13T00:00:00.000Z'
 heroImage: '../../assets/2025/10/ai-brain.png'
-categories: ['ai', 'prompt-engineering', 'productivity', 'best-practices']
+tags: ['ai', 'prompt-engineering', 'productivity', 'best-practices']
+categories: ['prompt-engineering']
 ---
 
 # Prompt Engineering Cheat-Sheet ✅
