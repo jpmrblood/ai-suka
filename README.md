@@ -53,10 +53,79 @@ All commands are run from the root of the project, from a terminal:
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 📝 Creating Blog Posts
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Blog posts are stored as Markdown files in the `src/content/blog/` directory. Each post must follow a specific structure to work properly with the site.
 
-## Credit
+### File Structure
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+1. **Location**: All blog posts go in `src/content/blog/`
+2. **File naming**: Use descriptive kebab-case names (e.g., `my-awesome-post.md`)
+3. **File extension**: Use `.md` for Markdown files
+
+### Frontmatter Requirements
+
+Each blog post must include the following frontmatter at the top of the file:
+
+```markdown
+---
+title: "Your Post Title"
+description: "Brief description of your post content"
+pubDate: "2025-10-15"
+tags: ["tag1", "tag2", "tag3"]
+categories: ["category-name"]
+heroImage: "../../assets/year/month/image-name.png"
+---
+```
+
+### Frontmatter Field Details
+
+| Field | Required | Description | Example |
+|-------|----------|-------------|---------|
+| `title` | Yes | The post title (appears in listings and as page title) | `"My Awesome Blog Post"` |
+| `description` | Yes | Brief description (used in meta tags and previews) | `"Learn how to create amazing content"` |
+| `pubDate` | Yes | Publication date in YYYY-MM-DD format | `"2025-10-15"` |
+| `tags` | Yes | Array of relevant tags for the post | `["javascript", "tutorial", "web-dev"]` |
+| `categories` | Yes | **Array of categories (maximum 3 per post)** | `["technology"]` |
+| `heroImage` | Yes | Path to hero image | `"../../assets/2025/10/hero-image.png"` |
+
+### Important Rules
+
+- **Category Limit**: Each post must not exceed 3 categories. This ensures better organization and navigation.
+- **Image Path**: Hero images should be placed in `src/assets/` with organized folder structure (year/month).
+- **Date Format**: Use ISO date format (YYYY-MM-DD) for `pubDate`.
+- **Consistent Naming**: Use kebab-case for file names and organize assets logically.
+
+### Content Guidelines
+
+- Write in Markdown format
+- Use appropriate heading levels (start with H2 `##` for main sections)
+- Include alt text for images
+- Keep content focused and well-structured
+- Use the established categories from existing posts as reference
+
+### Example Post Structure
+
+```markdown
+---
+title: "Getting Started with Astro"
+description: "Learn the basics of building a blog with Astro framework"
+pubDate: "2025-10-15"
+tags: ["astro", "tutorial", "static-site"]
+categories: ["web-development"]
+heroImage: "../../assets/2025/10/astro-tutorial.png"
+---
+
+## Introduction
+
+This is the first paragraph of your blog post...
+
+## Main Content
+
+Continue with your content here...
+
+## Conclusion
+
+Wrap up your thoughts...
+```
+
