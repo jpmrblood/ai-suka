@@ -3,7 +3,7 @@ title: "RAG vs CAG: Choosing the Right Approach for Your LLM Application"
 description: "Explore the differences between Retrieval Augmented Generation (RAG) and Cage Augmented Generation (CAG) for building large language model applications with external data sources."
 pubDate: "2025-10-17"
 tags: ["llm", "rag", "cag", "artificial-intelligence", "machine-learning", "mcp"]
-categories: ["artificial-intelligence", "technology"]
+categories: ["prompt-engineering", "youtube"]
 heroImage: "../../assets/2025/10/llm-context-window.png"
 ---
 
