@@ -92,6 +92,7 @@ heroImage: "../../assets/year/month/image-name.png"
 ### Important Rules
 
 - **Category Limit**: Each post must not exceed 3 categories. This ensures better organization and navigation.
+- **YouTube Content**: When creating articles based on YouTube videos, always include `"youtube"` as one of the categories alongside relevant topic categories (e.g., `["youtube", "prompt-engineering"]`).
 - **Image Path**: Hero images should be placed in `src/assets/` with organized folder structure (year/month).
 - **Date Format**: Use ISO date format (YYYY-MM-DD) for `pubDate`.
 - **Consistent Naming**: Use kebab-case for file names and organize assets logically.
@@ -128,4 +129,3 @@ Continue with your content here...
 
 Wrap up your thoughts...
 ```
-
