@@ -1,5 +1,5 @@
 ---
-title: "OpenSpec: A Framework for Specification-Driven Development with AI Assistants"
+title: "OpenSpec: Lightweight Change Management for AI-Assisted Development"
 description: "Discover how OpenSpec transforms software development by ensuring perfect alignment between humans and AI coding assistants before any code is written. A comprehensive guide to spec-driven development methodology."
 pubDate: "2025-10-18"
 tags: ["ai", "development", "workflow", "specifications", "collaboration", "productivity"]
