@@ -3,7 +3,7 @@ title: "OpenSpec: Revolutionizing Spec-Driven Development for AI-Human Collabora
 description: "Discover how OpenSpec transforms software development by ensuring perfect alignment between humans and AI coding assistants before any code is written. A comprehensive guide to spec-driven development methodology."
 pubDate: "2025-10-18"
 tags: ["ai", "development", "workflow", "specifications", "collaboration", "productivity"]
-categories: ["development", "ai-tools"]
+categories: ["development", "prompt-engineering"]
 heroImage: "../../assets/2025/10/prompt-engineering.png"
 ---
 
