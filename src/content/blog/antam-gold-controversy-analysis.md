@@ -4,7 +4,7 @@ description: "A comprehensive analysis of the PT Aneka Tambang (Antam) gold cont
 pubDate: "2025-10-19"
 tags: ["investment", "gold", "indonesia", "finance", "controversy", "precious-metals"]
 categories: ["finance", "investment"]
-heroImage: "../../assets/2025/10/ai-brain.png"
+heroImage: "../../assets/2025/10/gold-diggers.png"
 ---
 
 In 2024-2025, Indonesia's gold investment landscape was shaken by a significant controversy involving PT Aneka Tambang Tbk (Antam), the country's largest state-owned mining company. The case centers on allegations of unauthorized use of the Antam brand on approximately 109 tons of gold, raising important questions about gold authenticity, investment security, and regulatory oversight in Indonesia's precious metals market.
@@ -277,4 +277,19 @@ The case serves as a reminder of the importance of due diligence and verificatio
 
 6. **BPKAD Asahan** (2025-06-17). "Korupsi PT Antam Rp 5,9 Kuadriliun dan Emas Palsu 109 Ton". https://bpkad.asahankab.go.id/index.php/2025/06/17/3449/
 
-*Additional sources: LBS Urun Dana, VOI, Tempo.co, Reddit discussions on r/finansial*
+## Additional Sources
+
+7. **LBS Urun Dana**. "Terbongkar: Ini Kronologi Lengkap Kasus Emas Palsu Antam 109 Ton". https://www.lbs.id/publication/berita/terbongkar-ini-kronologi-lengkap-kasus-emas-palsu-antam-109-ton
+
+8. **VOI** (2024). "Regarding 109 Tons Of Fake Antam Gold Circulating In Society". https://voi.id/en/economy/386018
+
+9. **Tempo.co** (2024). "Antam's Faux Gold Fiasco; Here Are Ways to Check Its Authenticity". https://en.tempo.co/read/1874519/antams-faux-gold-fiasco-here-are-ways-to-check-its-authenticity
+
+## Additional Resources
+
+**News and Analysis:**
+- LBS Urun Dana. "Terbongkar: Ini Kronologi Lengkap Kasus Emas Palsu Antam 109 Ton". https://www.lbs.id/publication/berita/terbongkar-ini-kronologi-lengkap-kasus-emas-palsu-antam-109-ton
+- VOI (2024). "Regarding 109 Tons Of Fake Antam Gold Circulating In Society". https://voi.id/en/economy/386018
+
+**Community Discussions:**
+- Reddit Community (r/finansial). Various discussions on Antam gold authenticity and investment implications (2024-2025)
