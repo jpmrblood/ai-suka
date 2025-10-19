@@ -11,7 +11,7 @@ In 2024-2025, Indonesia's gold investment landscape was shaken by a significant 
 
 ## Background: Antam's Position in Indonesia's Gold Market
 
-PT Aneka Tambang Tbk (Antam) operates as a key player in Indonesia's mining sector, with particular strength in precious metals processing and distribution. The company's Unit Bisnis Pengolahan dan Pemurnian Logam Mulia (UBPP LM) manages gold refining and bullion production, making Antam one of the few Indonesian companies with London Bullion Market Association (LBMA) certification for precious metals processing.[^1]
+PT Aneka Tambang Tbk (Antam) operates as a key player in Indonesia's mining sector, with particular strength in precious metals processing and distribution. The company's Unit Bisnis Pengolahan dan Pemurnian Logam Mulia (UBPP LM) manages gold refining and bullion production, making Antam one of the few Indonesian companies with London Bullion Market Association (LBMA) certification for precious metals processing (Reuters, 2024).
 
 ### The LBMA Certification Advantage
 
@@ -26,22 +26,7 @@ The certification process involves rigorous auditing of production facilities, q
 
 ## The 109-Ton Controversy: Timeline and Key Events
 
-The controversy emerged publicly around May 2024 when Indonesia's Attorney General's Office (Kejaksaan Agung) announced investigations into Antam's gold management practices spanning 2010-2022.[^2]
-
-### The LBMA Certification Advantage
-
-Antam's LBMA certification represents a significant quality assurance benchmark in the global precious metals industry. This accreditation means:
-
-- **International recognition** of Antam's refining processes
-- **Quality assurance** for gold purity and weight accuracy
-- **Market acceptance** in global precious metals trading
-- **Regulatory compliance** with international standards
-
-The certification process involves rigorous auditing of production facilities, quality control procedures, and supply chain management, positioning Antam as a trusted name in Indonesia's gold market.
-
-## The 109-Ton Controversy: Timeline and Key Events
-
-The controversy emerged publicly around May 2024 when Indonesia's Attorney General's Office (Kejaksaan Agung) announced investigations into Antam's gold management practices spanning 2010-2022.
+The controversy emerged publicly around May 2024 when Indonesia's Attorney General's Office (Kejaksaan Agung) announced investigations into Antam's gold management practices spanning 2010-2022 (Scholar Hub, 2025).
 
 ### Initial Revelations
 
@@ -81,10 +66,10 @@ A critical distinction must be made between two separate concepts that are often
 
 Both Antam and the Attorney General's Office have provided important clarifications:
 
-- **Products from official channels** maintain their authenticity guarantees
+- **Products from official channels** maintain their authenticity guarantees (CNBC Indonesia, 2025)
 - **LBMA certification** remains valid for properly authorized products
 - **Consumer protection** measures exist for official distribution channels
-- **Investigation focus** is on management practices rather than product quality
+- **Investigation focus** is on management practices rather than product quality (Tirto.id, 2025)
 
 ## Investment Implications for Retail Investors
 
@@ -167,9 +152,9 @@ Indonesian online forums and social media platforms have seen extensive discussi
 - Alternative investment options
 
 **Misinformation Challenges:**
-- Exaggerated claims about fake gold circulation
-- Confusion between brand authorization and product quality
-- Overstated financial impact figures
+- Exaggerated claims about fake gold circulation (TurnBackHoax, 2025)
+- Confusion between brand authorization and product quality (Tirto.id, 2025)
+- Overstated financial impact figures (BPKAD Asahan, 2025)
 - Misattribution of responsibility
 
 ### International Perspective
@@ -278,14 +263,18 @@ The case serves as a reminder of the importance of due diligence and verificatio
 
 *This analysis is based on publicly available information as of October 2025. Investors should conduct thorough due diligence and consult with qualified financial advisors before making investment decisions.*
 
-## References
+## Sources
 
-[^1]: Reuters. "London gold body reviews purity concerns about Indonesian state miner" (2024-06-06). https://www.reuters.com/markets/commodities/london-gold-body-reviews-purity-concerns-about-indonesian-state-miner-2024-06-06/
-[^2]: Scholar Hub. "A CASE STUDY OF PT ANTAM'S 2025 MISINFORMATION" (2025). https://scholarhub.ui.ac.id/cgi/viewcontent.cgi?article=1135&context=jabt
-[^3]: CNBC Indonesia. "Beredar Kabar Emas Palsu, Kejagung Pastikan 109 Ton Emas Antam Asli" (2025-03-05). https://www.cnbcindonesia.com/news/20250305110341-4-615795/beredar-kabar-emas-palsu-kejagung-pastikan-109-ton-emas-antam-asli
-[^4]: Reuters. "London gold body reviews purity concerns about Indonesian state miner" (2024-06-06).
-[^5]: Tirto.id. "Benarkah Ada Emas Antam Palsu 2025? Ini Penjelasannya" (2025). https://tirto.id/benarkah-ada-emas-antam-palsu-2025-ini-faktanya-g838
-[^6]: Tirto.id. "Benarkah Ada Emas Antam Palsu 2025? Ini Penjelasannya" (2025).
-[^7]: TurnBackHoax. "[SALAH] Antam Sebarkan 109 Ton Emas Palsu" (2025-03-13). https://turnbackhoax.id/2025/03/13/salah-antam-sebarkan-109-ton-emas-palsu/
-[^8]: Tirto.id. "Benarkah Ada Emas Antam Palsu 2025? Ini Penjelasannya" (2025).
-[^9]: BPKAD Asahan. "Korupsi PT Antam Rp 5,9 Kuadriliun dan Emas Palsu 109 Ton" (2025-06-17). https://bpkad.asahankab.go.id/index.php/2025/06/17/3449/
+1. **Reuters** (2024-06-06). "London gold body reviews purity concerns about Indonesian state miner". https://www.reuters.com/markets/commodities/london-gold-body-reviews-purity-concerns-about-indonesian-state-miner-2024-06-06/
+
+2. **Scholar Hub** (2025). "A CASE STUDY OF PT ANTAM'S 2025 MISINFORMATION". https://scholarhub.ui.ac.id/cgi/viewcontent.cgi?article=1135&context=jabt
+
+3. **CNBC Indonesia** (2025-03-05). "Beredar Kabar Emas Palsu, Kejagung Pastikan 109 Ton Emas Antam Asli". https://www.cnbcindonesia.com/news/20250305110341-4-615795/beredar-kabar-emas-palsu-kejagung-pastikan-109-ton-emas-antam-asli
+
+4. **Tirto.id** (2025). "Benarkah Ada Emas Antam Palsu 2025? Ini Penjelasannya". https://tirto.id/benarkah-ada-emas-antam-palsu-2025-ini-faktanya-g838
+
+5. **TurnBackHoax** (2025-03-13). "[SALAH] Antam Sebarkan 109 Ton Emas Palsu". https://turnbackhoax.id/2025/03/13/salah-antam-sebarkan-109-ton-emas-palsu/
+
+6. **BPKAD Asahan** (2025-06-17). "Korupsi PT Antam Rp 5,9 Kuadriliun dan Emas Palsu 109 Ton". https://bpkad.asahankab.go.id/index.php/2025/06/17/3449/
+
+*Additional sources: LBS Urun Dana, VOI, Tempo.co, Reddit discussions on r/finansial*
