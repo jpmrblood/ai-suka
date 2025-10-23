@@ -1,5 +1,5 @@
 ---
-title: "Five Essential Claude Skills Changing How I Build"
+title: "Five Essential Claude Skills That Can Change How To Build Things"
 description: "Discover five powerful Claude skills that are transforming AI-assisted development in Claude Code."
 pubDate: "2025-10-23"
 tags: ["claude", "ai-skills", "ai-coding", "vibe-coding"]
