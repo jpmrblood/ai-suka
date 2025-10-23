@@ -57,6 +57,27 @@ All commands are run from the root of the project, from a terminal:
 
 Blog posts are stored as Markdown files in the `src/content/blog/` directory. Each post must follow a specific structure to work properly with the site.
 
+### Title Guidelines
+
+When creating blog post titles, follow these principles for professional, technical writing:
+
+**Preferred Title Style:**
+- **Specific and descriptive** - Mention key characteristics (e.g., "Lightweight", "Systematic", "AI-Native")
+- **Professional tone** - Avoid sensational language like "Revolutionizing", "Ultimate", "Amazing"
+- **Accurate claims** - Don't claim to be "the first" or "the best" unless verifiably true
+- **Technical focus** - Emphasize methodology, approach, or specific benefits
+
+**Examples:**
+- ✅ "OpenSpec: Lightweight Change Management for AI-Assisted Development"
+- ✅ "Spec Kit: Executable Specifications for Development Teams"
+- ❌ "OpenSpec: Revolutionizing AI-Driven Development" (too sensational)
+- ❌ "The Ultimate Guide to Specification-Driven Development" (too generic)
+
+**Title Structure:**
+- **[Tool/Project]: [Key Characteristic] [Focus Area] for [Target Audience]**
+- Keep under 80 characters for better SEO and readability
+- Use title case consistently
+
 ### File Structure
 
 1. **Location**: All blog posts go in `src/content/blog/`
