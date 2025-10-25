@@ -2,7 +2,7 @@
 title: "Indonesia's National Ethanol Strategy: A Roadmap to Energy Independence"
 description: "Comprehensive analysis of Indonesia's ambitious ethanol strategy - from E10 blending mandate to domestic production challenges, Brazil partnerships, and the path to energy sovereignty by 2027."
 pubDate: "2025-10-25"
-heroImage: "../../assets/2025/10/coretax.png"
+heroImage: "../../assets/2025/10/ethanol.png"
 tags: ["indonesia", "ethanol", "energy", "biofuel", "E10", "brazil", "pertamina", "agriculture", "trade"]
 categories: ["energy", "economy"]
 ---
