@@ -162,4 +162,4 @@ As Indonesia navigates these challenges, the resolution of this controversy will
 
 ---
 
-*This article was researched using Gemini Pro 2.5 as the base AI model and edited with Roo Code for enhanced accuracy and formatting.*
+*This article was researched by the author using Gemini Pro 2.5 in Gemini web interface and edited with Roo Code (using Supernova model) for enhanced accuracy and formatting.*
