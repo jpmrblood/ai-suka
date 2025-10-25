@@ -159,3 +159,7 @@ As Indonesia navigates these challenges, the resolution of this controversy will
 - [OJK Reports to Finance Minister Purbaya, Rp200 Trillion Fund Effect Already Visible (BeritaSatu.com)](https://www.beritasatu.com/ekonomi/2933789/ojk-lapor-ke-menkeu-purbaya-efek-dana-rp-200-triliun-sudah-terlihat)
 - [Revealing Coretax Obstacles, Purbaya Yudhi Sadewa Revises Target to January 2026 (TIMES Indonesia)](https://timesindonesia.co.id/ekonomi/561721/ungkap-kendala-coretax-purbaya-yudhi-sadewa-revisi-target-jadi-januari-2026)
 - [Purbaya Reveals the Main Culprit Hindering KPR Distribution, Not OJK's SLIK! (detikFinance)](https://finance.detik.com/moneter/d-8172095/purbaya-ungkap-biang-kerok-penghambat-penyaluran-kpr-bukan-slik-ojk)
+
+---
+
+*This article was researched using Gemini Pro 2.5 as the base AI model and edited with Roo Code for enhanced accuracy and formatting.*
