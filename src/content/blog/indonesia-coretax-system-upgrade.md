@@ -2,7 +2,7 @@
 title: "Indonesia's Coretax System Overhaul: From Security Gaps to High Performance"
 description: "An in-depth analysis of Indonesia's Coretax tax system improvements, covering technical fixes, cybersecurity enhancements, performance upgrades, and strategic implications for reducing foreign dependencies."
 pubDate: "2025-10-25"
-heroImage: "../../assets/2025/10/ai-brain.png"
+heroImage: "../../assets/2025/10/coretax.png"
 tags: ["coretax", "indonesia", "cybersecurity", "technology", "youtube", "tax-system"]
 categories: ["youtube", "technology"]
 ---
