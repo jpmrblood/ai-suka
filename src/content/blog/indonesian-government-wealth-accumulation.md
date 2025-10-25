@@ -11,112 +11,112 @@ categories: ["politics", "economy"]
 
 Indonesia's government at both central and regional levels is sitting on a massive **Rp653.4 trillion** in accumulated wealth, according to the latest data from Q3 2025. This unprecedented accumulation of idle funds has sparked a major controversy between Finance Minister Purbaya Yudhi Sadewa and West Java Governor Dedi Mulyadi, highlighting fundamental issues in fiscal management and budget execution across the archipelago.
 
-## Data Utama: Simpanan Dana Pemda di Perbankan
+## Primary Data: Regional Government Funds in Banking Sector
 
-Data terbaru yang dirilis pemerintah (Kemenkeu dan BI) per akhir Kuartal III 2025 (data Agustus/September 2025) menunjukkan gambaran yang sangat jelas mengenai skala masalah ini.
+The latest data released by the government (Ministry of Finance and Bank Indonesia) at the end of Q3 2025 (August/September 2025 data) shows a very clear picture of the scale of this problem.
 
-### 1. Total Simpanan Dana Pemerintah: Rp653.4 Triliun
+### 1. Total Government Deposits: Rp653.4 Trillion
 
-Total simpanan dana pemerintah (termasuk Pemda) di perbankan nasional per Agustus 2025 tercatat mencapai **Rp653,4 triliun**.
+Total government deposits (including regional governments) in the national banking system as of August 2025 reached **Rp653.4 trillion**.
 
-### 2. Rincian (Komposisi) Simpanan
+### 2. Deposit Breakdown (Composition)
 
-Angka total tersebut terbagi menjadi dua komponen utama yang krusial untuk analisis:
-- **Simpanan Berjangka (Deposito)**: Sebesar **Rp285,6 triliun**
-- **Simpanan Giro (Rekening Koran)**: Sebesar **Rp357,4 triliun**
-- **Tabungan**: Sebesar Rp10,4 triliun
+This total figure is divided into two main components that are crucial for analysis:
+- **Time Deposits (Fixed Deposits)**: **Rp285.6 trillion**
+- **Current Accounts (Checking Accounts)**: **Rp357.4 trillion**
+- **Savings Accounts**: Rp10.4 trillion
 
-## Analisis Data Kuantitatif
+## Quantitative Data Analysis
 
-Fokus analisis kita akan terbagi pada dua temuan data tersebut: dana deposito dan dana giro.
+Our analysis focus will be divided into two key findings: deposit funds and current account funds.
 
-### 1. Analisis Dana Deposito (Rp285,6 Triliun)
+### 1. Time Deposit Analysis (Rp285.6 Trillion)
 
-Ini adalah bentuk "pengendapan dana" yang paling jelas. Dana ini sengaja ditempatkan oleh Pemda dalam instrumen berbunga (deposito) dan tidak dialokasikan untuk belanja jangka pendek.
+This is the clearest form of "fund accumulation." These funds are deliberately placed by regional governments in interest-bearing instruments (deposits) and are not allocated for short-term spending.
 
-**Implikasi:**
-- Ini menunjukkan adanya kelebihan anggaran (SILPA) tahun-tahun sebelumnya atau pendapatan daerah yang masuk namun belum memiliki program yang siap dieksekusi
-- Pemda, dalam hal ini, memilih untuk mendapatkan *yield* (bunga) daripada membelanjakan dana tersebut
+**Implications:**
+- This indicates the presence of budget surplus (SILPA) from previous years or regional income that has been received but does not yet have ready-to-execute programs
+- Regional governments, in this case, choose to obtain *yield* (interest) rather than spend these funds
 
-**Masalah Ekonomi:**
-- Dari kacamata makroekonomi, dana Rp285,6 triliun ini "tidak produktif"
-- Dana tersebut tidak menjadi jalan, tidak menjadi jembatan, tidak membayar gaji guru honorer, dan tidak menjadi bantuan sosial
-- Ini memperlambat perputaran uang dan mengurangi efek pengganda (multiplier effect) dari belanja pemerintah di daerah
+**Economic Problems:**
+- From a macroeconomic perspective, these Rp285.6 trillion funds are "unproductive"
+- These funds do not become roads, do not become bridges, do not pay honorary teacher salaries, and do not become social assistance
+- This slows money circulation and reduces the multiplier effect of government spending in the regions
 
-### 2. Analisis Dana Giro (Rp357,4 Triliun)
+### 2. Current Account Analysis (Rp357.4 Trillion)
 
-Ini adalah temuan yang secara analitis lebih memberatkan. Dana giro adalah dana operasional yang seharusnya sangat likuid dan siap digunakan untuk membayar tagihan proyek, gaji, dan belanja rutin.
+This finding is analytically more concerning. Current accounts are operational funds that should be highly liquid and ready to be used for project bill payments, salaries, and routine expenditures.
 
-**Implikasi:**
-- Besarnya dana di giro (bahkan melebihi deposito) menunjukkan masalah serius dalam *manajemen kas (cash management)* dan *eksekusi anggaran*
-- Ini berarti uangnya *sudah ada* dan *siap dibelanjakan*, namun programnya tidak berjalan
+**Implications:**
+- The large amount of funds in current accounts (even exceeding deposits) indicates serious problems in *cash management* and *budget execution*
+- This means the money *already exists* and is *ready to be spent*, but the programs are not running
 
-**Masalah Efisiensi:**
-- Dana yang menganggur di giro berbunga sangat rendah (atau nol)
-- Ini adalah bentuk inefisiensi akut
-- Pemda gagal mengeksekusi belanja yang sudah direncanakan, menyebabkan penyerapan anggaran sangat lambat
-- Ini adalah indikator utama buruknya perencanaan dan lambatnya proses lelang/pengadaan
+**Efficiency Problems:**
+- Funds idle in current accounts earn very low interest (or zero)
+- This is a form of acute inefficiency
+- Regional governments fail to execute planned spending, causing very slow budget absorption
+- This is a primary indicator of poor planning and slow procurement processes
 
-## Data Regional: Konsentrasi Pengendapan Dana
+## Regional Data: Fund Accumulation Concentration
 
-Masalah pengendapan dana ini tidak merata dan sangat terkonsentrasi di daerah-daerah yang memiliki kapasitas fiskal besar.
+The fund accumulation problem is not evenly distributed and is highly concentrated in regions with large fiscal capacity.
 
-Berdasarkan data yang dirilis per September/Oktober 2025:
+Based on data released in September/October 2025:
 
-- **DKI Jakarta**: Tercatat sebagai provinsi dengan simpanan di bank **terbesar secara nasional**, mencapai **Rp14,6 triliun**
-- **Jawa Barat**: Dilaporkan menempati **posisi keempat** provinsi dengan simpanan terbesar, dengan angka (yang menjadi polemik) sekitar **Rp4,17 triliun** hingga **Rp4,7 triliun**
-- **Contoh Lain (Daerah Tk. II)**: Bahkan di level kota, angkanya signifikan. **Kota Samarinda**, misalnya, dilaporkan memiliki dana kas di bank sebesar **Rp1,48 triliun**
+- **DKI Jakarta**: Recorded as the province with the **largest bank deposits nationwide**, reaching **Rp14.6 trillion**
+- **West Java**: Reported to be in **fourth position** among provinces with the largest deposits, with figures (which became controversial) around **Rp4.17 trillion** to **Rp4.7 trillion**
+- **Other Examples (Level II Regions)**: Even at the city level, the figures are significant. **Samarinda City**, for example, is reported to have cash in banks amounting to **Rp1.48 trillion**
 
-## Kesimpulan Analisis (Berbasis Data)
+## Analysis Conclusion (Data-Based)
 
-Analisis data murni menunjukkan bahwa masalah "pengendapan dana Pemda" per Oktober 2025 memiliki dua wajah:
+Pure data analysis shows that the "regional government fund accumulation" problem as of October 2025 has two faces:
 
-1. **Masalah Niat (Deposito)**: Ada Rp285,6 triliun yang sengaja disimpan Pemda untuk mencari bunga
-2. **Masalah Inkompetensi Eksekusi (Giro)**: Ada Rp357,4 triliun dana operasional yang gagal dibelanjakan karena serapan anggaran yang lambat
+1. **Intentional Problem (Deposits)**: There are Rp285.6 trillion that regional governments deliberately save to earn interest
+2. **Execution Incompetence Problem (Current Accounts)**: There are Rp357.4 trillion in operational funds that failed to be spent due to slow budget absorption
 
-Masalah ini terkonsentrasi di daerah-daerah kaya (seperti DKI Jakarta), menciptakan ironi di mana daerah yang paling mampu seharusnya menjadi motor penggerak ekonomi, justru menjadi "penyimpan" dana terbesar di perbankan.
+This problem is concentrated in wealthy regions (like DKI Jakarta), creating an irony where the most capable regions that should be economic drivers instead become the largest "savers" of funds in the banking system.
 
-## Analisis Kasus Pengendapan Dana Pemda
+## Regional Government Fund Accumulation Case Analysis
 
-Isu pengendapan dana Pemda kembali menjadi sorotan utama pemerintah pusat. Menteri Keuangan Purbaya menyoroti total simpanan dana pemerintah di perbankan yang mencapai jumlah signifikan, termasuk Rp285,6 triliun dalam bentuk simpanan berjangka, yang dianggap menghambat perputaran ekonomi.
+The issue of regional government fund accumulation has again become the main focus of the central government. Finance Minister Purbaya highlighted the total government deposits in the banking system reaching significant amounts, including Rp285.6 trillion in time deposits, which are considered to hinder economic circulation.
 
-**Intisari Berita:**
+**News Summary:**
 
-- **Skala Nasional**: Menteri Keuangan Purbaya secara agresif mendorong Pemda untuk segera membelanjakan anggarannya dan tidak "memarkir" dana APBD di bank
-- **Kritik Menkeu**: Purbaya secara khusus mengkritik Pemda yang menyimpan dananya di rekening giro. Menurutnya, ini "malah lebih rugi lagi" karena bunganya lebih rendah dibandingkan deposito, dan praktik ini akan menjadi temuan pemeriksaan BPK
-- **Contoh Kasus DKI**: Di DKI Jakarta, anggota DPRD menyoroti pengendapan APBD yang mencapai Rp14,6 triliun, mempertanyakan mengapa Pemprov DKI menyimpan dana besar sementara di sisi lain melakukan pinjaman dan memangkas subsidi untuk rakyat
-- **Pembelaan Daerah**: Di sisi lain, beberapa kepala daerah, seperti Wali Kota Samarinda, membantah dananya "mengendap". Ia menjelaskan bahwa dana yang ada di kas daerah (RKUD) sudah dialokasikan untuk pembayaran termin proyek fisik dan belanja pegawai yang akan jatuh tempo, sehingga bukan dana yang ditimbun tanpa tujuan
+- **National Scale**: Finance Minister Purbaya is aggressively encouraging regional governments to immediately spend their budgets and not "park" APBD funds in banks
+- **Finance Minister's Criticism**: Purbaya specifically criticizes regional governments that keep their funds in current accounts. According to him, this is "even more disadvantageous" because the interest is lower than deposits, and this practice will become a finding in BPK audits
+- **DKI Case Example**: In DKI Jakarta, DPRD members highlighted APBD accumulation reaching Rp14.6 trillion, questioning why the DKI Provincial Government keeps large funds while on the other hand taking loans and cutting subsidies for the people
+- **Regional Defense**: On the other hand, some regional heads, such as the Mayor of Samarinda, denied that their funds are "idle." He explained that the funds in the regional treasury (RKUD) have been allocated for payment of physical project terms and employee spending that will fall due, so they are not funds that are hoarded without purpose
 
-**Analisis:**
-Kasus ini menunjukkan adanya perbedaan cara pandang fundamental antara pemerintah pusat dan daerah. Bagi Kemenkeu, dana yang belum dibelanjakan adalah "dana menganggur" yang menghambat target pertumbuhan ekonomi nasional. Bagi Pemda, dana tersebut adalah "dana kas" yang disiapkan untuk operasional dan pembayaran proyek yang sedang berjalan sesuai termin. Kritik Menkeu Purbaya yang menyoroti penempatan dana di giro menunjukkan kecurigaan bahwa Pemda tidak efisien dalam mengelola kasnya, bahkan berpotensi merugikan daerah.
+**Analysis:**
+This case shows a fundamental difference in perspective between the central government and regional governments. For the Ministry of Finance, unspent funds are "idle funds" that hinder national economic growth targets. For regional governments, these funds are "cash funds" prepared for operations and payments for ongoing projects according to terms. Minister Purbaya's criticism highlighting fund placement in current accounts shows suspicion that regional governments are not efficient in managing their cash, potentially harming the regions.
 
-## Analisis Menteri Keuangan Purbaya
+## Finance Minister Purbaya Analysis
 
-Sebagai Menteri Keuangan, Purbaya Yudhi Sadewa mengambil sikap yang sangat tegas dan proaktif dalam mendorong stimulus fiskal dan pembenahan internal.
+As Minister of Finance, Purbaya Yudhi Sadewa takes a very firm and proactive stance in encouraging fiscal stimulus and internal improvements.
 
-**Intisari Berita:**
+**News Summary:**
 
-- **Polemik Dana Pemda**: Purbaya menjadi sorotan utama karena "perang data" dengan Gubernur Jabar Dedi Mulyadi. Ia merilis data BI yang menyebut dana Pemprov Jabar mengendap Rp4,17 triliun. Ia bahkan menuding KDM "kemungkinan besar anak buahnya ngibulin dia."
-- **Mendorong Likuiditas**: Sebulan terakhir, Menkeu Purbaya telah menjalankan kebijakan menempatkan dana pemerintah Rp200 triliun di bank Himbara (BUMN). Tujuannya adalah untuk menurunkan suku bunga dan mendorong pertumbuhan kredit agar bisa tembus dua digit di akhir tahun
-- **Pembenahan Sistem Pajak**: Purbaya mengakui adanya kendala dalam implementasi sistem Coretax. Ia merevisi target penyelesaian penuh sistem ini menjadi Januari 2026
-- **Intervensi Sektor Perumahan**: Ia juga turun tangan mengatasi masalah penyaluran KPR (Kredit Pemilikan Rumah) yang terhambat oleh SLIK OJK, dan telah bertemu BP Tapera untuk mencari solusi
+- **Regional Government Fund Polemic**: Purbaya became the main focus because of the "data war" with West Java Governor Dedi Mulyadi. He released BI data stating that West Java Provincial Government funds were idle at Rp4.17 trillion. He even accused KDM that "his subordinates are most likely deceiving him."
+- **Encouraging Liquidity**: In the past month, Finance Minister Purbaya has implemented a policy of placing Rp200 trillion in government funds in Himbara banks (SOEs). The goal is to lower interest rates and encourage credit growth to reach double digits by the end of the year
+- **Tax System Improvements**: Purbaya acknowledged obstacles in implementing the Coretax system. He revised the target for full system completion to January 2026
+- **Housing Sector Intervention**: He also intervened to address KPR (Home Ownership Credit) distribution problems that were hampered by OJK's SLIK, and has met with BP Tapera to find solutions
 
-**Analisis:**
-Purbaya menunjukkan gaya kepemimpinan teknokrat yang sangat "hands-on" dan tidak ragu mengambil langkah konfrontatif untuk mencapai tujuannya. Ia menggunakan data (dari BI dan OJK) sebagai senjatanya. Sikapnya yang blak-blakan dalam polemik dengan KDM menunjukkan bahwa ia memprioritaskan disiplin anggaran nasional di atas etika birokrasi yang kaku. Fokusnya jelas: percepatan belanja daerah, peningkatan kredit perbankan, dan pembenahan sistem internal Kemenkeu (Coretax) untuk menggenjot perekonomian.
+**Analysis:**
+Purbaya demonstrates a technocrat leadership style that is very "hands-on" and does not hesitate to take confrontational steps to achieve his goals. He uses data (from BI and OJK) as his weapon. His outspoken attitude in the polemic with KDM shows that he prioritizes national budget discipline over rigid bureaucratic ethics. His focus is clear: accelerating regional spending, increasing bank credit, and improving the Ministry of Finance's internal systems (Coretax) to boost the economy.
 
-## Analisis Kang Dedi Mulyadi (KDM)
+## Governor Dedi Mulyadi (KDM) Analysis
 
-Sebagai Gubernur Jawa Barat, Dedi Mulyadi merespons langsung tudingan Menkeu Purbaya dengan melakukan langkah-langkah pembuktian publik.
+As Governor of West Java, Dedi Mulyadi responded directly to Finance Minister Purbaya's accusations by taking public verification steps.
 
-**Intisari Berita:**
+**News Summary:**
 
-- **Membantah Data Kemenkeu**: KDM secara terbuka membantah data Menkeu Purbaya. Ia menegaskan tidak ada dana Rp4,17 triliun yang "diendapkan" dalam bentuk deposito untuk mencari bunga
-- **Klarifikasi Giro**: KDM menjelaskan bahwa dana yang ada (per 21 Oktober 2025 tersisa Rp2,3 triliun) berada di rekening giro kas daerah dan merupakan dana operasional yang "sudah dipakai untuk bayar proyek, gaji pegawai," dan belanja rutin lainnya
-- **Mendatangi BI dan BPK**: Tidak hanya membantah, KDM langsung mendatangi kantor Bank Indonesia dan BPK Perwakilan Jabar. Tujuannya adalah untuk mencocokkan data dan meminta BPK melakukan audit transparansi atas kas daerah Pemprov Jabar agar masalah ini jelas
-- **Transparansi Anggaran**: KDM menegaskan bahwa sisa kas daerah Jabar saat ini sekitar Rp2,6 triliun dari total APBD Rp31 triliun adalah wajar untuk kebutuhan belanja hingga akhir tahun dan bukan merupakan pengendapan
+- **Denying Ministry of Finance Data**: KDM openly denied Minister Purbaya's data. He asserted that there are no Rp4.17 trillion funds "deposited" in the form of deposits to earn interest
+- **Current Account Clarification**: KDM explained that the existing funds (as of October 21, 2025, remaining Rp2.3 trillion) are in regional treasury current accounts and are operational funds that "have been used to pay for projects, employee salaries," and other routine expenditures
+- **Visiting BI and BPK**: Not only denying, KDM directly visited Bank Indonesia offices and BPK West Java Representatives. The goal is to cross-check data and request BPK to conduct transparency audits on West Java Provincial Government's regional treasury so that this issue becomes clear
+- **Budget Transparency**: KDM emphasized that the current remaining regional treasury of West Java, around Rp2.6 trillion from the total APBD of Rp31 trillion, is reasonable for spending needs until the end of the year and does not constitute accumulation
 
-**Analisis:**
-Dedi Mulyadi menggunakan gaya politiknya yang responsif dan "turun langsung" untuk menghadapi krisis ini. Alih-alih hanya perang pernyataan di media, ia secara fisik mendatangi lembaga otoritas (BI dan BPK) untuk membuktikan posisinya. Ini adalah langkah politik untuk menunjukkan transparansi dan "melawan" data yang dirilis pusat. KDM memposisikan dirinya sebagai kepala daerah yang transparan dan taat aturan, yang mana sisa dana di kasnya adalah murni untuk kebutuhan operasional, bukan untuk "ditimbun" seperti yang dituduhkan.
+**Analysis:**
+Dedi Mulyadi uses his responsive political style and "direct approach" to face this crisis. Instead of just engaging in media statement wars, he physically visited authoritative institutions (BI and BPK) to prove his position. This is a political move to demonstrate transparency and "fight back" against data released by the central government. KDM positions himself as a transparent and rule-abiding regional head, where the remaining funds in his treasury are purely for operational needs, not for "hoarding" as accused.
 
 ## Government Response and Policy Direction
 
@@ -141,21 +141,21 @@ The **Rp653.4 trillion** government fund accumulation represents more than just 
 
 As Indonesia navigates these challenges, the resolution of this controversy will likely set important precedents for center-regional fiscal relations and government accountability in the years ahead.
 
-**Tautan Berita yang Memuat Data:**
+**News Links Containing Data:**
 
-- [Bos OJK Lapor Purbaya, Ada Permintaan Bunga Tinggi dari Rekening Pemerintah (Infobanknews.com)](https://infobanknews.com/bos-ojk-lapor-purbaya-ada-permintaan-bunga-tinggi-dari-rekening-pemerintah/) (Memuat data total simpanan Rp653,4 T, serta rincian Deposito Rp285,6 T dan Giro Rp357,4 T)
-- [Lukman Soroti Pengendapan APBD Rp14,6 Triliun di Bank (RRI.co.id)](https://rri.co.id/daerah/1921293/lukman-soroti-pengendapan-apbd-rp14-6-triliun-di-bank) (Memuat data spesifik DKI Jakarta Rp14,6 Triliun)
-- [Kronologi Adu Data Dedi Mulyadi vs Purbaya soal Dana Pemda Mengendap (Tempo.co)](https://www.tempo.co/politik/kronologi-adu-data-dedi-mulyadi-vs-purbaya-soal-dana-pemda-mengendap-2082724) (Menyebut data Jabar di posisi keempat dengan Rp4,7 Triliun)
-- [Soal Kas Daerah Rp1,48 Triliun, Wali Kota Samarinda Bantah Dana Mengendap (Kaltim Today)](https://kaltimtoday.co/soal-kas-daerah-rp148-triliun-wali-kota-samarinda-bantah-dana-mengendap-tanpa-pemanfaatan) (Memuat data spesifik Kota Samarinda Rp1,48 Triliun)
+- [OJK Boss Reports to Purbaya, High Interest Demands from Government Accounts (Infobanknews.com)](https://infobanknews.com/bos-ojk-lapor-purbaya-ada-permintaan-bunga-tinggi-dari-rekening-pemerintah/) (Contains total deposit data of Rp653.4T, as well as breakdown of Deposits Rp285.6T and Current Accounts Rp357.4T)
+- [Lukman Highlights APBD Accumulation of Rp14.6 Trillion in Banks (RRI.co.id)](https://rri.co.id/daerah/1921293/lukman-soroti-pengendapan-apbd-rp14-6-triliun-di-bank) (Contains specific DKI Jakarta data of Rp14.6 Trillion)
+- [Chronology of Dedi Mulyadi vs Purbaya Data Dispute on Regional Government Funds (Tempo.co)](https://www.tempo.co/politik/kronologi-adu-data-dedi-mulyadi-vs-purbaya-soal-dana-pemda-mengendap-2082724) (Mentions West Java data in fourth position with Rp4.7 Trillion)
+- [Regarding Regional Treasury of Rp1.48 Trillion, Samarinda Mayor Denies Idle Funds (Kaltim Today)](https://kaltimtoday.co/soal-kas-daerah-rp148-triliun-wali-kota-samarinda-bantah-dana-mengendap-tanpa-pemanfaatan) (Contains specific Samarinda City data of Rp1.48 Trillion)
 
 **Additional Sources:**
 
-- [Menkeu Purbaya Kritik Pengendapan Dana APBD di Rekening Giro, Pemda Dituding Rugi (Kompas.com)](https://www.kompas.com/sulawesi-selatan/read/2025/10/23/201200988/menkeu-purbaya-kritik-pengendapan-dana-apbd-di-rekening-giro?page=all)
-- [Ini Hasil Dedi Mulyadi Datangi BI, Cek Dana Mengendap Rp4,17 T (CNBC Indonesia)](https://www.cnbcindonesia.com/news/20251023085504-4-678499/ini-hasil-dedi-mulyadi-datangi-bi-cek-dana-mengendap-rp417-t)
-- [Usai ke BI, Dedi Mulyadi Datangi BPK Cari Tahu Info Duit Pemda (CNBC Indonesia)](https://www.cnbcindonesia.com/news/20251024124258-4-678916/usai-ke-bi-dedi-mulyadi-datangi-bpk-cari-tahu-info-duit-pemda)
-- [Buka-bukaan Dedi Mulyadi soal Transparansi Keuangan APBD Jabar (Detik.com)](https://www.detik.com/jabar/berita/d-8177036/buka-bukaan-dedi-mulyadi-soal-transparansi-keuangan-apbd-jabar)
-- [Dedi Mulyadi 'Lawan Balik' Menkeu Purbaya soal Dana APBD Mengendap di Bank (Liputan6.com)](https://www.liputan6.com/tag/dedi-mulyadi)
-- [Kebijakan Purbaya Dorong Likuiditas Rp200 Triliun, Kredit Masih Seret (Mistar.id)](https://mistar.id/news/ekonomi/kebijakan-purbaya-dorong-likuiditas-rp200-triliun-kredit-masih-seret)
-- [OJK Lapor ke Menkeu Purbaya, Efek Dana Rp200 Triliun Sudah Terlihat (BeritaSatu.com)](https://www.beritasatu.com/ekonomi/2933789/ojk-lapor-ke-menkeu-purbaya-efek-dana-rp-200-triliun-sudah-terlihat)
-- [Ungkap Kendala Coretax, Purbaya Yudhi Sadewa Revisi Target Jadi Januari 2026 (TIMES Indonesia)](https://timesindonesia.co.id/ekonomi/561721/ungkap-kendala-coretax-purbaya-yudhi-sadewa-revisi-target-jadi-januari-2026)
-- [Purbaya Ungkap Biang Kerok Penghambat Penyaluran KPR, Bukan SLIK OJK! (detikFinance)](https://finance.detik.com/moneter/d-8172095/purbaya-ungkap-biang-kerok-penghambat-penyaluran-kpr-bukan-slik-ojk)
+- [Finance Minister Purbaya Criticizes APBD Fund Accumulation in Current Accounts, Regional Governments Accused of Losses (Kompas.com)](https://www.kompas.com/sulawesi-selatan/read/2025/10/23/201200988/menkeu-purbaya-kritik-pengendapan-dana-apbd-di-rekening-giro?page=all)
+- [Results of Dedi Mulyadi's Visit to BI, Checking Idle Funds of Rp4.17T (CNBC Indonesia)](https://www.cnbcindonesia.com/news/20251023085504-4-678499/ini-hasil-dedi-mulyadi-datangi-bi-cek-dana-mengendap-rp417-t)
+- [After BI, Dedi Mulyadi Visits BPK to Find Out Regional Government Fund Information (CNBC Indonesia)](https://www.cnbcindonesia.com/news/20251024124258-4-678916/usai-ke-bi-dedi-mulyadi-datangi-bpk-cari-tahu-info-duit-pemda)
+- [Dedi Mulyadi Opens Up About West Java APBD Financial Transparency (Detik.com)](https://www.detik.com/jabar/berita/d-8177036/buka-bukaan-dedi-mulyadi-soal-transparansi-keuangan-apbd-jabar)
+- [Dedi Mulyadi 'Fights Back' Against Finance Minister Purbaya on APBD Funds Idle in Banks (Liputan6.com)](https://www.liputan6.com/tag/dedi-mulyadi)
+- [Purbaya's Policy to Boost Rp200 Trillion Liquidity, Credit Still Sluggish (Mistar.id)](https://mistar.id/news/ekonomi/kebijakan-purbaya-dorong-likuiditas-rp200-triliun-kredit-masih-seret)
+- [OJK Reports to Finance Minister Purbaya, Rp200 Trillion Fund Effect Already Visible (BeritaSatu.com)](https://www.beritasatu.com/ekonomi/2933789/ojk-lapor-ke-menkeu-purbaya-efek-dana-rp-200-triliun-sudah-terlihat)
+- [Revealing Coretax Obstacles, Purbaya Yudhi Sadewa Revises Target to January 2026 (TIMES Indonesia)](https://timesindonesia.co.id/ekonomi/561721/ungkap-kendala-coretax-purbaya-yudhi-sadewa-revisi-target-jadi-januari-2026)
+- [Purbaya Reveals the Main Culprit Hindering KPR Distribution, Not OJK's SLIK! (detikFinance)](https://finance.detik.com/moneter/d-8172095/purbaya-ungkap-biang-kerok-penghambat-penyaluran-kpr-bukan-slik-ojk)
