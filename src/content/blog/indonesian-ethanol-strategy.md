@@ -199,9 +199,29 @@ A critical part of the strategy is to build a domestic ethanol industry from the
 
 Recognizing the scale of the challenge, Indonesia is actively seeking international expertise. A key partnership has been formed with **Brazil**, a global leader in sugarcane-based ethanol . This collaboration involves technology transfer, knowledge exchange, and could even lead to **Brazilian investors building ethanol factories in Indonesia** .
 
-### Protectionist Trade Measures
+### Protectionist Trade Measures and International Implications
 
-To protect the nascent domestic industry, the government is implementing supportive trade policies. In September 2025, the Ministry of Trade issued **Regulation No. 32/2025**, which reinstates import controls on ethanol . The stated goal is to **protect local sugarcane farmers** and ensure the domestic market is reserved for local producers . This policy was further reinforced in October 2025 with an amendment that added ethanol-related items to the country's hazardous substances import policy .
+To protect the nascent domestic industry, the government is implementing supportive trade policies that have significant international trade implications.
+
+**Recent Policy Developments:**
+- In September 2025, the Ministry of Trade issued **Regulation No. 32/2025**, which reinstates import controls on ethanol
+- The stated goal is to **protect local sugarcane farmers** and ensure the domestic market is reserved for local producers
+- This policy was reinforced in October 2025 with an amendment adding ethanol-related items to the hazardous substances import policy
+
+**International Trade Context:**
+Indonesia's ethanol policy has evolved significantly, creating both opportunities and challenges for international trade partners:
+
+- **2020 Market Opening**: Indonesia previously removed ethanol import restrictions in 2020, recognizing octane benefits and allowing U.S. ethanol entry through pre-blended fuel arrangements
+- **U.S. Trade Interests**: American ethanol producers and the U.S. Grains Council have actively promoted ethanol exports to Indonesia, viewing it as a growing market opportunity
+- **Trade Agreement Potential**: Recent trade agreements between the U.S. and Indonesia include provisions to boost ethanol, distillers grains, and sustainable aviation fuel (SAF) exports
+- **Current Restrictions**: The 2025 regulations represent a reversal from the more open 2020 market, prioritizing domestic industry over immediate import access
+
+**Global Business Implications:**
+The policy affects multiple international stakeholders:
+- **U.S. Ethanol Producers**: Face new barriers after gaining market access in 2020
+- **Brazilian Partnerships**: Focus on technology transfer rather than direct exports
+- **Regional Trade Dynamics**: ASEAN neighbors impacted by Indonesia's protectionist approach
+- **Investment Uncertainty**: Foreign companies face regulatory risks when considering ethanol investments
 
 ## 🏭 The Domestic Industry: Current State and Key Players
 
