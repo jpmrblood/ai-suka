@@ -363,4 +363,4 @@ The DME strategy, while ambitious, aligns perfectly with Indonesia's national pr
 
 ---
 
-*This article was researched using available public sources and government documents, and edited with Roo Code (using Supernova model) for enhanced accuracy and formatting.*
+*This article was researched using available public sources and government documents using Grok from X AI, and edited with Roo Code (using Supernova model) for enhanced accuracy and formatting.*
