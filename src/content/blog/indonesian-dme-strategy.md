@@ -2,7 +2,7 @@
 title: "Indonesia's DME Strategy: Coal Gasification for Energy Independence"
 description: "Comprehensive analysis of Indonesia's ambitious DME strategy - from coal gasification initiatives to reducing LPG import dependency, featuring Presidential Regulation 109/2020 and the path to energy security by 2030."
 pubDate: "2025-10-26"
-heroImage: "../../assets/2025/10/coretax.png"
+heroImage: "../../assets/2025/10/ethanol.png"
 tags: ["indonesia", "dme", "dimethyl-ether", "coal-gasification", "energy", "lpg", "pertamina", "energy-security", "coal-downstreaming"]
 categories: ["energy", "economy", "infrastructure"]
 ---
