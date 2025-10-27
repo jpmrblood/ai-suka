@@ -1,0 +1,113 @@
+---
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import * as icons from "lucide-astro";
+import type { TimelineItem } from "../types";
+
+gsap.registerPlugin(ScrollTrigger);
+
+interface Props {
+  items: TimelineItem[];
+  title?: string;
+}
+
+const { items = [], title = "Timeline" } = Astro.props;
+
+// Function to parse markdown-style links and basic formatting in descriptions
+function parseMarkdownContent(text: string): string {
+  // Pattern to match [text](url) markdown links
+  const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+  // Replace markdown links with HTML anchor tags
+  let parsedText = text.replace(markdownLinkRegex, '<a href="$2" class="text-primary hover:underline font-medium" target="_blank" rel="noopener noreferrer">$1</a>');
+
+  // Replace **bold** text with <strong> tags
+  parsedText = parsedText.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold">$1</strong>');
+
+  // Replace *italic* text with <em> tags
+  parsedText = parsedText.replace(/\*([^*]+)\*/g, '<em class="italic">$1</em>');
+
+  return parsedText;
+}
+---
+
+<section id="timeline" class="relative mx-auto max-w-4xl px-6 py-24 font-sans">
+  <h2 class="mb-16 text-center text-4xl font-bold text-primary">
+    {title}
+  </h2>
+
+  <div class="relative mx-auto border-l border-base-300 lg:border-l-0 lg:border-t lg:mx-0">
+    {items.map((item, i) => {
+      const IconComponent = item.icon ? icons[item.icon] : null;
+
+      return (
+        <div
+          class:list={[
+            "timeline-item relative flex flex-col lg:flex-row items-center gap-6 pb-16 opacity-0",
+            i % 2 === 1 ? "lg:flex-row-reverse" : "",
+          ]}
+          data-index={i}
+        >
+          <div class="absolute left-[calc(50%-2px)] top-0 hidden h-full w-[2px] bg-base-300 lg:block"></div>
+
+          <div
+            class:list={[
+              "absolute flex items-center justify-center rounded-full bg-primary shadow-md shadow-primary/40 text-base-100",
+              "lg:top-1/2 lg:-translate-y-1/2",
+              i % 2 === 0 ? "lg:left-[calc(50%-18px)]" : "lg:left-[calc(50%-18px)]",
+              "size-9",
+            ]}
+          >
+            {IconComponent ? <IconComponent size={16} /> : <div class="h-2 w-2 rounded-full bg-base-100"></div>}
+          </div>
+
+          <div
+            class:list={[
+              "relative z-10 w-full max-w-md rounded-2xl border border-base-200 bg-base-100 p-6 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl",
+              "lg:w-[45%]",
+              i % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto",
+            ]}
+          >
+            <time class="mb-1 block text-sm font-semibold text-base-content/70">
+              {item.year}
+            </time>
+            <h3 class="text-xl font-bold text-base-content flex items-center gap-2">
+              {IconComponent && (
+                <span class="inline-flex items-center justify-center rounded-md bg-primary/10 p-1 text-primary">
+                  <IconComponent size={18} />
+                </span>
+              )}
+              {item.title}
+            </h3>
+            <p class="mt-2 text-base-content/80" set:html={parseMarkdownContent(item.description)}></p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".timeline-item");
+
+    items.forEach((el) => {
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  });
+</script>

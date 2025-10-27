@@ -126,6 +126,14 @@ heroImage: "../../assets/year/month/image-name.png"
 - Keep content focused and well-structured
 - Use the established categories from existing posts as reference
 
+**Timeline Markdown Support**
+Timeline descriptions support basic markdown formatting for enhanced credibility and readability:
+
+- **Links**: `[Source](https://example.com)` - Creates clickable source citations
+- **Bold**: `**important text**` - Emphasizes key information
+- **Italic**: `*emphasized text*` - Adds subtle emphasis
+- **Combined**: `**Reuters** reported: *"[Source](https://reuters.com)"*` - Complex formatting in one description
+
 ### Example Post Structure
 
 ```markdown
@@ -150,3 +158,111 @@ Continue with your content here...
 
 Wrap up your thoughts...
 ```
+
+## 🎯 Creating Timeline-Based Articles
+
+Timeline-based articles use the `Timeline` component to create visually engaging chronological content. This is perfect for showcasing project timelines, personal journeys, historical events, or step-by-step processes.
+
+### Timeline Component Usage
+
+To create a timeline-based article, follow these steps:
+
+1. **Import the Timeline Component**
+
+```markdown
+import Timeline from "../../components/Timeline.astro";
+```
+
+2. **Add Timeline to Your Content**
+
+Place the Timeline component anywhere in your article content:
+
+```markdown
+<Timeline
+  title="Your Timeline Title"
+  items={[
+    { year: "2025", title: "Achievement Title", description: "Brief description of what happened.", icon: "icon-name" },
+    { year: "2024", title: "Another Event", description: "Another description here.", icon: "another-icon" }
+  ]}
+/>
+```
+
+### Timeline Item Properties
+
+Each timeline item requires the following properties:
+
+| Property | Type | Required | Description | Example |
+|----------|------|----------|-------------|---------|
+| `year` | string | Yes | The year or time period | `"2025"`, `"Q1 2024"`, `"March 15"` |
+| `title` | string | Yes | Main title for the timeline item | `"Launched Blog"` |
+| `description` | string | Yes | Detailed description of the event (supports markdown links and formatting) | `"Built my Astro + Tailwind blog. [Source](https://example.com)"` |
+| `icon` | string | No | Lucide icon name (without 'Icon' suffix) | `"rocket"`, `"zap"`, `"code"` |
+
+### Available Icons
+
+The Timeline component uses Lucide icons. Popular choices include:
+
+- `rocket` - Launches, new beginnings
+- `zap` - Energy, electricity, speed
+- `code` - Programming, development
+- `palette` - Design, creativity
+- `book` - Learning, knowledge
+- `star` - Achievements, milestones
+- `target` - Goals, objectives
+- `users` - Teams, collaboration
+- `globe` - Global, international
+- `cpu` - Technology, AI
+
+### Timeline Component Features
+
+- **Responsive Design**: Adapts to different screen sizes
+- **Smooth Animations**: GSAP-powered scroll animations
+- **Customizable Icons**: Uses Lucide icon library
+- **Flexible Styling**: Integrates with your site's design system
+- **Interactive Elements**: Hover effects and smooth transitions
+
+### Best Practices for Timeline Articles
+
+1. **Chronological Order**: Arrange items from oldest to newest or vice versa
+2. **Consistent Icons**: Use similar icon types for related events
+3. **Clear Descriptions**: Keep descriptions concise but informative
+4. **Visual Balance**: Don't overload with too many timeline items
+5. **Context Integration**: Introduce the timeline with explanatory text
+6. **Mobile-Friendly**: Test timeline appearance on different devices
+
+### Example Timeline Article Structure
+
+```markdown
+---
+title: "My Development Journey"
+description: "A timeline of my programming milestones"
+pubDate: "2025-10-19"
+tags: ["programming", "career", "timeline"]
+categories: ["web-development"]
+heroImage: "../../assets/2025/10/journey.png"
+---
+
+import Timeline from "../../components/Timeline.astro";
+
+<article class="prose mx-auto">
+  <h1>My Development Journey</h1>
+  <p>
+    Here's how my programming skills and interests have evolved over the years.
+  </p>
+
+  <Timeline
+    title="Programming Milestones"
+    items={[
+      { year: "2019", title: "Started Learning", description: "Began with HTML, CSS, and JavaScript basics.", icon: "book" },
+      { year: "2020", title: "First Project", description: "Built my first full-stack web application.", icon: "code" },
+      { year: "2021", title: "Open Source", description: "Contributed to my first open source project.", icon: "github" },
+      { year: "2022", title: "Mentoring", description: "Started helping other developers learn.", icon: "users" },
+      { year: "2023", title: "Advanced Topics", description: "Dived into AI, machine learning, and modern frameworks. [Source](https://example.com/ai-advancement)", icon: "cpu" }
+    ]}
+  />
+
+  <p>And the learning continues...</p>
+</article>
+```
+
+This creates an engaging, interactive timeline that enhances your article's visual appeal and helps readers follow the chronological progression of your story or topic.
