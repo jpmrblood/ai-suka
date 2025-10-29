@@ -3,7 +3,7 @@ title: "GitHub Spec Kit: Transforming Natural Language into Executable Software"
 description: "Explore how GitHub Spec Kit revolutionizes software development by making specifications executable through AI-powered workflows. A comprehensive guide to specification-driven development with practical examples and implementation strategies."
 pubDate: "2025-10-18"
 tags: ["ai", "development", "specifications", "automation", "workflow", "github"]
-categories: ["development", "ai-tools"]
+categories: ["development", "prompt-engineering"]
 heroImage: "../../assets/2025/10/prompt-engineering.png"
 ---
 
