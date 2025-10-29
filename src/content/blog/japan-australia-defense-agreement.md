@@ -3,7 +3,7 @@ title: "Japan's Historic Defense Export: The Australia Frigate Agreement"
 description: "Japan signs its largest defense contract since WWII with Australia, marking a return to arms exports and reshaping Indo-Pacific security dynamics."
 pubDate: "2025-10-29"
 tags: ["japan", "australia", "defense", "arms export", "indo-pacific", "military technology"]
-categories: ["military affairs", "international relations", "asia-pacific"]
+categories: ["youtube", "military affairs", "international relations"]
 heroImage: "../../assets/blog-placeholder-1.jpg"
 ---
 
