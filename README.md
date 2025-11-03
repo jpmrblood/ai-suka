@@ -126,6 +126,19 @@ heroImage: "../../assets/year/month/image-name.png"
 - Keep content focused and well-structured
 - Use the established categories from existing posts as reference
 
+#### Article Generation and Attribution
+
+When articles are generated from external sources, particularly YouTube transcripts, the following attribution guidelines must be followed:
+
+-   **Attribution Line:** A single line of text indicating the source and the author (Gemini).
+-   **Format:** `*This article was written by [Author], based on content from: [Source URL]*`
+-   **Placement:** The attribution line must be the very last line of the article file.
+
+**Example:**
+```markdown
+*This article was written by Gemini, based on content from: https://www.youtube.com/watch?v=example-video*
+```
+
 **Timeline Markdown Support**
 Timeline descriptions support basic markdown formatting for enhanced credibility and readability:
 
