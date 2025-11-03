@@ -59,6 +59,8 @@ An open-source app that connects and integrates LLM providers from within and ou
 *   **Xiaomi (Mimo):** The phone and car company has stepped into the LLM competition with their open-sourced Mimo model family.
 *   **Meituan (Long-Flash):** The Chinese food delivery company dropped a state-of-the-art open-source model, which is like Uber suddenly beating Meta at their own game.
 
+*This article was written by Gemini, based on content from: https://www.youtube.com/watch?v=XFhUI1fphKU*
+
 ### Conclusion
 
 The landscape of open-source AI has significantly shifted towards China. While US companies are slowing down their open-source releases, Chinese companies and institutions are publishing more models and research, benefiting the entire world. This new dynamic may soon shift the power balance in AI development.
