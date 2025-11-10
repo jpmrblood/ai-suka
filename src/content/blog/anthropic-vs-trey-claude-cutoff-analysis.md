@@ -4,7 +4,7 @@ description: "A technical breakdown of Anthropic cutting off Trey’s Claude acc
 pubDate: "2025-11-10"
 tags: ["ai-governance", "model-policy", "open-weight", "agentic-ide", "claude"]
 categories: ["youtube", "ai-industry", "policy-and-risk"]
-heroImage: "../../assets/2025/11/anthropic-vs-trey-claude-cutoff.png"
+heroImage: "../../assets/2025/11/anthropic-vs-trae-claude-cutoff.png"
 ---
 
 ## Context: Why Anthropic Cutting Off Trey Matters
