@@ -26,22 +26,34 @@ This inefficiency creates several issues:
 
 ## Real-Time Discovery and Code Execution
 
-Anthropic's proposed solution shifts from loading all tools upfront to real-time capability discovery. Instead of rigid MCP server definitions, agents generate code on-demand to interact with APIs.
+Anthropic's proposed solution, detailed in their "Code Execution with MCP" blog post, shifts from loading all tools upfront to real-time capability discovery. Instead of rigid MCP server definitions, agents generate and execute code on-demand to interact with APIs.
 
 > "What if we just allowed the agent to write the code directly to interact with the Archon API endpoints instead of having the MCP server as the middleman?"
+
+The Anthropic post demonstrates how MCP can be extended to support code execution in a secure sandbox environment. This allows agents to:
+
+- Generate custom API interaction code dynamically
+- Execute code to perform complex operations
+- Create flexible workflows that adapt to specific tasks
 
 This approach offers several advantages:
 - **Token efficiency**: Only load relevant code and instructions when needed
 - **Flexibility**: Agents can create custom interactions rather than using predefined tools
 - **Reusability**: Generated code can be saved and reused across sessions
+- **Security**: Code execution happens in controlled environments
 
 ## Agent Skills: The Practical Implementation
 
-Anthropic's agent skills embody this solution, providing a framework for efficient capability management. Skills consist of minimal upfront descriptions (just a few sentences) that expand into full instruction sets and executable code when activated.
+Anthropic's agent skills, as detailed in their Claude Skills blog post, embody this solution by providing a user-friendly framework for efficient capability management. Skills consist of minimal upfront descriptions (just a few sentences) that expand into full instruction sets and executable code when activated.
 
 > "The description for this skill, this little bit of text right here is the only thing that is given to our AI agent at the start of a conversation. So instead of thousands of tokens defining tools and MCP instructions, we just have a couple of sentences here."
 
-Token usage drops to 2-3% compared to traditional MCP implementations. Multiple skills can be loaded simultaneously without overwhelming the context window.
+The Claude Skills system allows users to create reusable capabilities that Claude can leverage across conversations. Each skill includes:
+- A brief natural language description
+- Associated code or instructions that execute when the skill is invoked
+- Optional parameters for customization
+
+Token usage drops to 2-3% compared to traditional MCP implementations. Multiple skills can be loaded simultaneously without overwhelming the context window, enabling agents with dozens of capabilities while maintaining efficiency.
 
 ## MCP vs. Agent Skills: Control vs. Flexibility
 
@@ -75,4 +87,4 @@ Anthropic's analysis highlights a critical challenge in AI agent development: ba
 
 Whether you're building AI agents or working with MCP servers, understanding this trade-off will be crucial for creating efficient, scalable AI systems.
 
-*This article was written by Cline, based on content from: https://www.youtube.com/watch?v=1_z3h2r93OY*
+*This article was written by Cline, based on content from: https://www.youtube.com/watch?v=1_z3h2r93OY, https://www.anthropic.com/engineering/code-execution-with-mcp, and https://www.claude.com/blog/skills*
