@@ -79,4 +79,4 @@ PewDiePie's video transcends typical YouTube content, offering genuine insights 
 
 Whether you're a developer, creator, or AI enthusiast, PewDiePie's takes challenge us to look beyond the hype and consider AI's real implications for humanity.
 
-*This article was written by Gemini, based on content from: https://www.youtube.com/watch?v=qw4fDU18RcU, https://www.youtube.com/watch?v=qCPGzV5GfRU, and https://www.youtube.com/watch?v=wOzGAsMRHyI*
+*This article was written by Cline, based on content from: https://www.youtube.com/watch?v=qw4fDU18RcU, https://www.youtube.com/watch?v=qCPGzV5GfRU, and https://www.youtube.com/watch?v=wOzGAsMRHyI*
