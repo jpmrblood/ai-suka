@@ -136,7 +136,7 @@ When articles are generated from external sources, particularly YouTube transcri
 
 **Example:**
 ```markdown
-*This article was written by Gemini, based on content from: https://www.youtube.com/watch?v=example-video*
+*This article was written by [Insert you, AI Assistant naming here], based on content from: https://www.youtube.com/watch?v=example-video*
 ```
 
 **Timeline Markdown Support**
