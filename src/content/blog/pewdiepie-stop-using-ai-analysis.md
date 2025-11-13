@@ -1,7 +1,7 @@
 ---
 title: "PewDiePie's 'Stop Using AI Right Now': A Developer's Deep Dive"
 description: "An analysis of PewDiePie's controversial AI video, breaking down his takes on AI hardware, media generation, influencer culture, and the future of AGI from a developer's perspective."
-pubDate: "2025-12-11"
+pubDate: "2025-11-12"
 tags: ["ai", "pewdiepie", "analysis", "youtube", "hardware", "agi"]
 categories: ["youtube", "ai", "technology"]
 heroImage: "../../assets/2025/10/ai-brain.png"

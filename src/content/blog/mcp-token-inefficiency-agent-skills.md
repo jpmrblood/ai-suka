@@ -1,7 +1,7 @@
 ---
 title: "MCP's Token Inefficiency Problem and the Agent Skills Solution"
 description: "Exploring Anthropic's analysis of MCP's token consumption issues and their proposed solution using agent skills for more efficient AI agents."
-pubDate: "2025-12-11"
+pubDate: "2025-11-12"
 tags: ["mcp", "ai", "agents", "anthropic", "token-efficiency", "code-execution"]
 categories: ["youtube", "ai", "technology"]
 heroImage: "../../assets/2025/10/ai-brain.png"
