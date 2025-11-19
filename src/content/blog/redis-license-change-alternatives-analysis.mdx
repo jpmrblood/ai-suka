@@ -1,0 +1,175 @@
+---
+title: "The Great Redis Fork: How a License Change Sparked an In-Memory Database Revolution"
+description: "Analysis of Redis's controversial license change and the emergence of major alternatives including Valkey, Garnet, and DragonflyDB as the open-source community searches for new homes."
+pubDate: "2025-11-19"
+tags: ["redis", "open-source", "database", "license", "fork", "cloud", "infrastructure"]
+categories: ["youtube", "open-source", "database", "cloud-infrastructure"]
+heroImage: "../../assets/2025/11/redis-fork-analysis.png"
+---
+
+## The Shock Heard 'Round the Dev World
+
+When Redis announced it would change its license and no longer be open source, developers worldwide were caught off guard. After all, Redis had long been one of the most admired databases in the developer community—a critical component in countless web applications for improving performance through in-memory data storage.
+
+The timing couldn't have been more ironic. The announcement dropped during KubeCon, a major cloud-native conference held between March 19-22 in Paris. Organized by the Linux Foundation, this event brings together the who's who of cloud infrastructure, with virtually every major cloud provider sponsoring and attending.
+
+As news of the license change spread through the conference halls, it sparked immediate discussions. The developer community, already sensitive to license changes after recent controversies in the open-source world, began questioning the future of one of their most essential tools.
+
+## The Linux Foundation Steps In
+
+After the initial shock settled, the Linux Foundation quickly positioned itself as a potential savior. Jim Zemlin, the executive director of the Linux Foundation, immediately began conversations with key stakeholders to chart the future of an open-source Redis fork.
+
+One of the most crucial conversations was with David Nalley, AWS's "director of open source strategy." This connection would prove pivotal, as it would eventually lead to AWS engineer Madelyn Olson becoming the central figure in the Redis fork story.
+
+## Meet Madelyn Olson: From Redis Maintainer to Fork Leader
+
+Before the license change, Madelyn Olson was one of just five core maintainers of Redis. The maintainer team was an interesting mix:
+
+- Three maintainers from Redis the company itself
+- One maintainer from Alibaba
+- Madelyn Olson from AWS
+
+When the license change was announced, Olson faced an impossible situation. As an AWS employee contributing to Redis, she could no longer remain part of the maintainer team under the new license terms. Her response was decisive: after consulting with other contributors, they all agreed they would no longer contribute under the restrictive license.
+
+Olson quickly created a fork on her personal GitHub account, initially calling it "placeholderKV." However, after discussions with other contributors, they settled on a more permanent name: **Valkey**.
+
+## The Linux Foundation Partnership
+
+What started as a passion project quickly evolved into something much bigger. David Nalley introduced Olson and the growing group of maintainers to the Linux Foundation. When they met to discuss the project's future, it became clear that their goals aligned perfectly.
+
+The Linux Foundation's involvement brought several advantages:
+
+- **Financial backing** from multiple major corporations
+- **Institutional support** for governance and project management
+- **Credibility** in the open-source community
+- **Infrastructure** for sustainable development
+
+## Major Cloud Providers Rally Behind Valkey
+
+The support for Valkey came quickly and decisively:
+
+### AWS
+As expected, AWS was the first major supporter. Having already employed Olson to work on Redis, they would likely continue funding her work on Valkey. This represented continuity rather than a major shift in strategy.
+
+### Other Major Backers
+Surprisingly, several other cloud giants joined the effort:
+- **Google** (a significant endorsement given their own cloud database offerings)
+- **Oracle** (interesting timing given their acquisition focus)
+- **Ericsson** (showing telecommunications industry interest)
+- **Snap** (the company behind Snapchat)
+
+### The Microsoft Exception
+Notably absent from the supporter list was Microsoft. This wasn't accidental—only two days before the Redis license change, Microsoft had announced their own open-source Redis alternative called "Garnet."
+
+Whether through exceptional foresight or pure coincidence, Microsoft had positioned themselves perfectly. Garnet is:
+- Compatible with existing Redis clients
+- Licensed under the permissive MIT license
+- Claims performance comparable to or better than Redis (though these benchmarks should be taken with caution)
+
+## Snap's KeyDB Dilemma
+
+One of the most interesting developments involves Snap, the company behind Snapchat. Snap already owned a Redis fork called **KeyDB**, which they had acquired from a Y Combinator-backed startup in 2022.
+
+KeyDB's focus was on **multithreading performance** and **vertical scaling**—improving performance by scaling up existing servers rather than adding more nodes horizontally. This approach made sense for Snap's infrastructure needs.
+
+However, with Snap now backing Valkey, KeyDB's future becomes uncertain. As critical Snapchat infrastructure relies on KeyDB, they likely won't abandon it immediately. But in the long term, supporting two competing projects doesn't make strategic sense.
+
+The most likely scenario is that Snap will:
+1. Continue KeyDB development in the near term (to maintain their own infrastructure)
+2. Eventually migrate to Valkey as it matures
+3. Focus their development efforts on the more broadly supported project
+
+## Other Notable Forks
+
+### Redict: The Copyleft Alternative
+Andrew Kelley, known for creating the ZIG programming language, initiated an independent fork called **Redict**. Unlike Valkey, Redict is a copyleft fork, maintaining a different philosophical approach to licensing. As of now, it remains in early stages without a stable release.
+
+### The Rust Factor: Skytable
+No 2024 database discussion would be complete without a Rust alternative. **Skytable** offers:
+- Extremely high performance (Rust's hallmark)
+- A different approach entirely—not a drop-in Redis replacement
+- Their own query language called "BlueQL" (SQL-based)
+- Positioned as a full database rather than a simple key-value store
+
+### DragonflyDB: The Performance Challenger
+**DragonflyDB** takes a different licensing approach. Currently, it's not fully open source (similar to Redis's new license), but will become available under Apache License in five years.
+
+Their performance claims are aggressive:
+- Claims 25x better performance than Redis
+- Focus on multithreading and vertical scaling (like KeyDB)
+- Currently not a drop-in replacement but working toward compatibility
+
+## The Performance Wars
+
+Performance claims in the database world are notoriously tricky. DragonflyDB's 25x performance improvement over Redis drew immediate scrutiny. Redis responded with their own blog post comparing DragonflyDB to Redis Cluster, with Redis coming out on top.
+
+The reality is that performance varies significantly based on:
+- **Hardware configuration**
+- **Workload patterns**
+- **Configuration options**
+- **Testing methodology**
+
+These competing benchmarks highlight the importance of testing alternatives in your specific environment rather than relying on vendor claims.
+
+## Why This Matters for the Open Source Ecosystem
+
+The Redis license change represents more than just one database's evolution. It reflects several broader trends:
+
+### Corporate Control vs Community Governance
+- Redis's change demonstrates how corporate decisions can dramatically impact community projects
+- The Linux Foundation's involvement shows an alternative model for project governance
+- Multiple forks emerging suggests the community values choice and continuity
+
+### Cloud Provider Dependencies
+- The major backers (AWS, Google, Oracle) all have significant Redis deployments
+- Their support of Valkey ensures their infrastructure needs are met
+- This creates a sustainable funding model for the fork
+
+### Performance vs Compatibility Trade-offs
+- Different forks prioritize different aspects (compatibility, performance, licensing philosophy)
+- Users must choose based on their specific needs rather than assuming one-size-fits-all
+- The fragmentation could lead to innovation but also complexity
+
+## Looking Ahead: The Future of In-Memory Databases
+
+As of now, **Valkey appears to be the safest bet for the near future**. With backing from major cloud providers who depend on Redis for their services, it has the strongest combination of:
+- **Financial sustainability**
+- **Technical talent** (including core Redis maintainers)
+- **Institutional support**
+- **Community adoption potential**
+
+Users can expect:
+1. **Tagged releases** of Valkey in the near term
+2. **Migration paths** from Redis to Valkey
+3. **Continued development** of the features and APIs developers depend on
+4. **Performance improvements** as the community optimizes the fork
+
+## What This Means for Developers
+
+For developers currently using Redis, the implications are clear:
+
+### Short-term Actions
+- **Monitor Valkey development** for production-ready releases
+- **Test compatibility** with your existing Redis applications
+- **Consider migration strategies** if you're heavily invested in Redis
+
+### Long-term Considerations
+- **License awareness**: Understand the implications of using software with changing licenses
+- **Vendor diversification**: Consider not being dependent on a single database provider
+- **Open source sustainability**: Support projects that align with your values
+
+## Conclusion: Adaptation and Innovation
+
+The Redis license change, while controversial, has inadvertently sparked innovation across the in-memory database landscape. Instead of one dominant Redis implementation, we're now seeing multiple approaches:
+
+- **Valkey**: The community-driven continuation with enterprise backing
+- **Garnet**: Microsoft's entry with cloud integration
+- **Redict**: The philosophical alternative for copyleft advocates
+- **Skytable**: The Rust-powered next-generation approach
+- **DragonflyDB**: The performance-focused competitor
+
+This fragmentation, while potentially confusing, also ensures that the open-source ethos of Redis continues through multiple channels. The Linux Foundation's involvement provides stability, while competitive alternatives drive innovation.
+
+The story is far from over. As these projects mature and real-world deployments begin, we'll see which approaches prove most successful. One thing is certain: the community's response to Redis's license change demonstrates the resilience and adaptability of the open-source ecosystem.
+
+*This article was written by Cline, based on content from: https://www.youtube.com/watch?v=ot6bNg-nZ3M*
