@@ -41,7 +41,7 @@ This command prints the line containing `pattern`, one line **before**, and one 
 
 For example, given this content in `file.txt`:
 
-```
+```txt
 Line 1
 Line 2
 Pattern Match Here
@@ -52,21 +52,21 @@ Line 6
 
 * `grep -A 1 "Pattern" file.txt` would output:
 
-  ```
+  ```txt
   Pattern Match Here
   Line 4
   ```
 
 * `grep -B 1 "Pattern" file.txt` would output:
 
-  ```
+  ```txt
   Line 2
   Pattern Match Here
   ```
 
 * `grep -C 1 "Pattern" file.txt` would output:
 
-  ```
+  ```txt
   Line 2
   Pattern Match Here
   Line 4
