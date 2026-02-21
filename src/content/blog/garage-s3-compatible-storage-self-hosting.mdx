@@ -1,0 +1,138 @@
+---
+title: "Garage: Lightweight S3-Compatible Object Storage for Self-Hosting"
+description: "A practical guide to Garage, an open-source S3-compatible object storage solution that runs on modest hardware"
+pubDate: "2026-02-21"
+tags: ["open-source", "storage", "s3", "self-hosting", "tutorial"]
+categories: ["technology", "tutorial"]
+heroImage: "../../assets/2026/02/garage-s3-storage.png"
+---
+
+import Timeline from "../../components/Timeline.astro";
+
+AWS S3 has become the de facto standard for object storage in the cloud. Since its launch in 2006, it has grown to store over 500 trillion objects—a number so massive it feels almost fictional. However, S3 comes with significant drawbacks that have driven many users to seek alternatives.
+
+## The Problems with AWS S3
+
+While S3 offers excellent APIs and features, it presents three major challenges for users:
+
+1. **Egress Costs**: The real expense isn't storage—it's fetching your data. Egress fees often exceed storage costs, creating what's known as the "egress trap."
+
+2. **Pricing Complexity**: Navigating Glacier, Intelligent Tiering, and API request fees requires expertise that resembles a PhD in AWS pricing.
+
+3. **Control Issues**: For users wanting full control over their data, S3's managed nature can be limiting.
+
+## MinIO: The Old Standard
+
+MinIO has long been the gold standard for self-hosting S3-compatible storage, particularly in Kubernetes environments. However, recent changes have shifted its trajectory—licensing modifications, reduction in community features, and maintenance mode have left users seeking alternatives.
+
+## Enter Garage: A Fresh Approach
+
+Garage represents a fundamentally different way to think about object storage. It's an open-source solution written in Rust, designed specifically for self-hosting with these key goals:
+
+- **Lightweight**: Can run on modest hardware, including old laptops or Raspberry Pis
+- **Resilient**: Built to handle extreme load while maintaining data integrity
+- **Simple**: Avoids unnecessary complexity while covering the majority of S3 features
+- **Truly Open Source**: Served on Forgejo with full transparency
+
+<Timeline
+  title="Object Storage Evolution"
+  items={[
+    { year: "2006", title: "AWS S3 Launch", description: "Amazon launches S3, starting with 10 billion objects.", icon: "rocket" },
+    { year: "Present", title: "500+ Trillion Objects", description: "S3 now stores over half a quadrillion objects.", icon: "database" },
+    { year: "Now", title: "Garage Release", description: "Open-source alternative emerges for self-hosting enthusiasts.", icon: "box" }
+  ]}
+/>
+
+## Key Features
+
+Garage delivers comprehensive S3 compatibility while offering additional capabilities:
+
+- **S3 API Compatibility**: Use existing AWS tools and workflows
+- **Geographic Distribution**: Deploy cluster nodes across different locations
+- **Static Website Hosting**: Serve websites directly from buckets
+- **Kubernetes & Nomad Integration**: Orchestrate storage in containerized environments
+- **Multi-Language SDKs**: Support for Go and other languages
+
+## Setting Up Garage with Docker
+
+Getting Garage running requires a configuration file. Here's how to set it up:
+
+### Configuration File
+
+Create a `garage.toml` with essential settings:
+
+```toml
+data_dir = "/var/lib/garage"
+metadata_dir = "/var/lib/garage-meta"
+
+[garage]
+  engine = "sqlite"
+  replication_factor = 1
+
+[s3_api]
+  s3_region = "garage"
+
+[web_server]
+  bind_addr = "0.0.0.0:3900"
+
+[rpc]
+  secret_key = "your-rpc-secret"
+
+[admin]
+  api_token = "your-admin-token"
+```
+
+### Docker Deployment
+
+```bash
+docker run -d \
+  -v garage-data:/var/lib/garage \
+  -v garage-meta:/var/lib/garage-meta \
+  -p 3900:3900 \
+  -p 3901:3901 \
+  -p 3902:3902 \
+  -p 3903:3903 \
+  garagehq/garage:latest
+```
+
+## Using Garage with AWS CLI
+
+Once running, configure AWS CLI to work with Garage:
+
+```bash
+export AWS_DEFAULT_REGION=garage
+export AWS_ACCESS_KEY_ID=your-key-id
+export AWS_SECRET_ACCESS_KEY=your-secret
+export AWS_ENDPOINT_URL=http://localhost:3900
+
+# List buckets
+aws s3 ls
+
+# Upload files
+aws s3 cp myfile.json s3://my-bucket/
+
+# Create presigned URLs
+aws s3 presign s3://my-bucket/myfile.json --expires-in 604800
+```
+
+## Hosting Static Websites
+
+Garage supports static website hosting similar to S3:
+
+```bash
+# Enable website hosting
+garage bucket website allow my-domain-bucket
+
+# Copy website files
+aws s3 cp index.html s3://my-domain-bucket/
+```
+
+For production deployments, pair Garage with a reverse proxy like Caddy for automatic TLS certificate management.
+
+## Conclusion
+
+Garage provides a compelling alternative for users who want S3 compatibility without the costs and complexity of AWS. Its lightweight nature makes it accessible for personal projects, while its clustering capabilities support more demanding enterprise workloads. Combined with the ability to run on modest hardware, Garage represents a return to the spirit of open-source self-hosting.
+
+For those seeking long-term off-site backup solutions without recurring SaaS costs, pairing Garage with privacy-focused providers like [Interex](https://interex.com) offers a complete self-hosted storage infrastructure.
+
+*This article was written by Kilo Code, based on content from: https://www.youtube.com/watch?v=BvyGBDxGTAs*
