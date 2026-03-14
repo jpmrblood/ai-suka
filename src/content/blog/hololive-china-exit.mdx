@@ -1,0 +1,71 @@
+---
+title: "The Hololive China Saga: From Geopolitical Fallout to Global Pivot"
+description: "A detailed overview of the 2020 disbandment of Hololive CN, analyzing internal rumors, protest allegations, and the current status of all six members."
+pubDate: "2026-03-14"
+tags: ["hololive", "vtuber", "cover-corp", "industry-analysis", "geopolitics"]
+categories: ["entertainment", "tech-culture"]
+heroImage: "../../assets/2026/03/hololive-global.png"
+---
+
+import Timeline from "../../components/Timeline.astro";
+import MemberStatus from "../../components/MemberStatus.astro";
+
+<article class="prose mx-auto">
+  <p>
+    In late 2020, the VTubing world was shaken by the sudden exit of Hololive Production from the Chinese market. What began as a minor UI oversight during a livestream evolved into a complex crisis involving allegations of internal betrayal and coordinated protests.
+  </p>
+
+  <Timeline
+    title="Chronological Timeline of the Hololive CN Crisis"
+    items={[
+      {
+        year: "Sept 2020",
+        title: "The Initial Controversy",
+        description:
+          "Kiryu Coco and Akai Haato displayed YouTube analytics listing 'Taiwan' as a country. [Source: BBC News](https://www.bbc.com/news/world-asia-54332882)",
+        icon: "alert-triangle"
+      },
+      {
+        year: "Oct 2020",
+        title: "Allegations of Internal Protest",
+        description:
+          "Rumors surfaced on forums like NGA and Reddit that some Hololive CN members allegedly supported the nationalist backlash or 'protested' internally against the JP branch's management. These claims remain unverified officially.",
+        icon: "users"
+      },
+      {
+        year: "Nov 2020",
+        title: "Official Exit Announcement",
+        description:
+          "Cover Corp announced the graduation of all six Hololive China members. [Source: Cover Corp](https://cover-corp.com/en/news/detail/20201116b/)",
+        icon: "user-minus"
+      }
+    ]}
+  />
+
+  <h2>Member Status: Where Are They Now?</h2>
+
+  <MemberStatus 
+    members={[
+      { name: "Civia", path: "Went Independent (Indie)", status: "Active as Ciyana", channelUrl: "https://space.bilibili.com/3544114" },
+      { name: "Rosalyn", path: "Went Independent", status: "Semi-Active", channelUrl: "https://space.bilibili.com/433149814" },
+      { name: "Artia", path: "Went Independent", status: "Inactive", channelUrl: "https://space.bilibili.com/431135243" },
+      { name: "Yogiri", path: "Retired / Reincarnated", status: "Officially Retired", channelUrl: "https://space.bilibili.com/427061218" },
+      { name: "Doris", path: "Attempted Indie", status: "Retired", channelUrl: "https://space.bilibili.com/433149179" },
+      { name: "Spade Echo", path: "Went Independent", status: "Inactive", channelUrl: "https://space.bilibili.com/433149141" }
+    ]} 
+  />
+
+  <h2>Official Sources & References</h2>
+  <ul>
+    <li><a href="https://www.bbc.com/news/world-asia-54332882" target="_blank">BBC News – “Virtual YouTubers suspended over Taiwan comments”</a></li>
+    <li><a href="https://cover-corp.com/en/news/detail/20201116b/" target="_blank">Cover Corp – “Graduation of Hololive China talents”</a></li>
+    <li><a href="https://www.siliconera.com/hololive-china-members-will-all-graduate-by-the-end-of-2020/" target="_blank">Siliconera – “Hololive China IP Retention Settlement”</a></li>
+  </ul>
+
+  <p>
+    <em>Disclaimer: While the graduation and IP retention are matters of public record, rumors of specific members participating in protests or sabotage are based on community archives and have not been confirmed by Cover Corp.</em>
+  </p>
+  <p>
+    <em>This article is created from Gemini Pro AI.</em>
+  </p>
+</article>

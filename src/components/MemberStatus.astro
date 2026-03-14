@@ -1,0 +1,64 @@
+---
+interface Member {
+  name: string;
+  path: string;
+  status: string;
+  channelUrl?: string;
+}
+
+interface Props {
+  members: Member[];
+}
+
+const { members } = Astro.props;
+---
+
+<div class="not-prose overflow-x-auto my-8 border border-base-300 rounded-box bg-base-100 shadow-sm">
+  <table class="table table-zebra w-full">
+    {/* Head */}
+    <thead class="bg-base-200 text-base-content">
+      <tr>
+        <th>Name</th>
+        <th>Post-Holo Path</th>
+        <th>Current Status</th>
+      </tr>
+    </thead>
+
+    {/* Body */}
+    <tbody>
+      {members.map((member) => (
+        <tr class="hover">
+          <td class="font-bold text-primary italic">
+            {member.name}
+          </td>
+          <td class="text-sm">
+            {member.path}
+          </td>
+          <td>
+            <div class="flex flex-col gap-1">
+              <span class={`badge badge-sm badge-soft ${
+                member.status.toLowerCase().includes('active')
+                ? 'badge-success'
+                : member.status.toLowerCase().includes('retired')
+                ? 'badge-neutral'
+                : 'badge-error'
+              }`}>
+                {member.status}
+              </span>
+              {member.channelUrl && (
+                <a
+                  href={member.channelUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link link-primary link-hover text-[10px] uppercase tracking-wider font-semibold"
+                >
+                  Bilibili Link
+                </a>
+              )}
+            </div>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
