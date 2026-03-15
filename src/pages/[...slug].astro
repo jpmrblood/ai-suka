@@ -4,8 +4,6 @@ import BlogPost from '../layouts/BlogPost.astro';
 import PostNavigation from '../components/PostNavigation.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import { getRelatedPosts } from '../utils/relatedPosts';
-import fs from 'node:fs';
-import path from 'node:path';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -17,10 +15,10 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 const allPosts = await getCollection('blog');
-const sortedPosts = allPosts.sort((a, b) => 
+const sortedPosts = allPosts.sort((a, b) =>
 	new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
 
@@ -29,27 +27,11 @@ const prevPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentInde
 const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : undefined;
 
 const relatedPosts = getRelatedPosts(post, allPosts, 3);
-
-const filePath = path.join('./src/content/blog', `${post.id}.md`);
-const mdxFilePath = path.join('./src/content/blog', `${post.id}.mdx`);
-let rawContent = '';
-
-try {
-	if (fs.existsSync(filePath)) {
-		rawContent = fs.readFileSync(filePath, 'utf-8');
-	} else if (fs.existsSync(mdxFilePath)) {
-		rawContent = fs.readFileSync(mdxFilePath, 'utf-8');
-	}
-} catch {
-	rawContent = '';
-}
-
-rawContent = rawContent.replace(/^---[\s\S]*?---/, '').trim();
 ---
 
-<BlogPost {...post.data} rawContent={rawContent}>
+<BlogPost {...post.data} headings={headings}>
 	<Content />
-	
+
 	<PostNavigation prev={prevPost} next={nextPost} />
 	<RelatedPosts posts={relatedPosts} />
 </BlogPost>

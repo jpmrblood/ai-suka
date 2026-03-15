@@ -1,8 +1,12 @@
 ---
-import type { TocItem } from '../utils/toc';
+interface Heading {
+	depth: number;
+	slug: string;
+	text: string;
+}
 
 interface Props {
-	headings: TocItem[];
+	headings: Heading[];
 }
 
 const { headings } = Astro.props;

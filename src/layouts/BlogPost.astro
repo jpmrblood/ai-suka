@@ -10,17 +10,22 @@ import ShareButtons from '../components/ShareButtons.astro';
 import BackToTop from '../components/BackToTop.astro';
 import ProgressBar from '../components/ProgressBar.astro';
 import { calculateReadingTime, formatReadingTime } from '../utils/readingTime';
-import { extractHeadings } from '../utils/toc';
 import TableOfContents from '../components/TableOfContents.astro';
+
+type Heading = {
+	depth: number;
+	slug: string;
+	text: string;
+};
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	rawContent?: string;
+	headings?: Heading[];
 };
 
-const { title, description, pubDate, updatedDate, heroImage, categories, rawContent } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, categories, rawContent, headings = [] } = Astro.props;
 
 const readingTimeMinutes = rawContent ? calculateReadingTime(rawContent) : 5;
-const headings = rawContent ? extractHeadings(rawContent) : [];
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
@@ -34,14 +39,14 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 		<ProgressBar title={title} description={description} url={pageUrl} />
 		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<Header />
-		
+
 		<main id="main-content" class="container mx-auto px-4 pt-24 md:pt-28 max-w-5xl">
 			<div class="flex flex-col lg:flex-row gap-8">
 				<article class="flex-1 min-w-0">
 					<figure class="mb-6">
 						{heroImage && <Image width={1020} height={510} src={heroImage} alt="" class="rounded-xl" />}
 					</figure>
-					
+
 					<div class="mb-6">
 						<div class="text-center mb-6">
 							<div class="flex flex-wrap justify-center gap-2 mb-4">
@@ -65,17 +70,17 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 							<h1 class="text-3xl md:text-4xl font-bold mt-4 mb-6">{title}</h1>
 							<div class="divider"></div>
 						</div>
-						
+
 						<div class="flex justify-center mb-6">
 							<ShareButtons title={title} url={pageUrl} description={description} />
 						</div>
-						
+
 						<div class="prose prose-lg max-w-none">
 							<slot />
 						</div>
 					</div>
 				</article>
-				
+
 				<aside class="hidden lg:block w-64 flex-shrink-0">
 					<div class="sticky top-28 space-y-6">
 						<TableOfContents headings={headings} />
@@ -83,7 +88,7 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 				</aside>
 			</div>
 		</main>
-		
+
 		<BackToTop />
 		<Footer />
 	</body>
