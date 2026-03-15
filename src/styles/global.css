@@ -196,8 +196,8 @@ hr {
 
 .table-of-contents {
 	position: sticky;
-	top: 6rem;
-	max-height: calc(100vh - 8rem);
+	top: 7rem;
+	max-height: calc(100vh - 9rem);
 	overflow-y: auto;
 }
 

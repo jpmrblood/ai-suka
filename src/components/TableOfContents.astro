@@ -9,12 +9,12 @@ const { headings } = Astro.props;
 ---
 
 {headings.length > 0 && (
-	<nav class="table-of-contents p-4 rounded-xl bg-base-200" aria-label="Table of contents">
+	<nav class="table-of-contents p-4 rounded-2xl shadow-lg border border-white/20" style="background: inherit; background-color: rgba(255, 255, 255, .3); backdrop-filter: blur(5px);" aria-label="Table of contents">
 		<h3 class="font-bold text-lg mb-3">On this page</h3>
 		<ul class="space-y-2 text-sm">
 			{headings.map((heading) => (
 				<li class={heading.depth === 3 ? 'ml-4' : ''}>
-					<a 
+					<a
 						href={`#${heading.slug}`}
 						class="text-base-content/70 hover:text-primary transition-colors"
 					>
