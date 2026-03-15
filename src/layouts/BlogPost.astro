@@ -5,49 +5,86 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import ReadingTime from '../components/ReadingTime.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import BackToTop from '../components/BackToTop.astro';
+import ProgressBar from '../components/ProgressBar.astro';
+import { calculateReadingTime, formatReadingTime } from '../utils/readingTime';
+import { extractHeadings } from '../utils/toc';
+import TableOfContents from '../components/TableOfContents.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & {
+	rawContent?: string;
+};
 
-const { title, description, pubDate, updatedDate, heroImage, categories } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, categories, rawContent } = Astro.props;
+
+const readingTimeMinutes = rawContent ? calculateReadingTime(rawContent) : 5;
+const headings = rawContent ? extractHeadings(rawContent) : [];
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<meta name="base-url" content={import.meta.env.BASE_URL} />
 	</head>
 
 	<body>
-		<main class="container mx-auto px-4 pt-0 max-w-4xl">
-			<figure class="mb-6">
-				{heroImage && <Image width={1020} height={510} src={heroImage} alt="" class="rounded-xl" />}
-			</figure>
-			<div class="mb-6">
-				<div class="text-center mb-6">
-					<div class="flex flex-wrap justify-center gap-2 mb-4">
-						<div class="badge badge-outline badge-lg">
-							<FormattedDate date={pubDate} />
-						</div>
-						{categories && categories.map((category: string) => (
-							<a href={`${import.meta.env.BASE_URL}/categories/${category}/`} class="badge badge-primary badge-lg hover:badge-primary-focus transition-colors">
-								{category}
-							</a>
-						))}
-					</div>
-					{
-						updatedDate && (
-							<div class="text-sm text-base-content/70 italic mb-4">
-								Last updated on <FormattedDate date={updatedDate} />
+		<ProgressBar title={title} description={description} url={pageUrl} />
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		<Header />
+		
+		<main id="main-content" class="container mx-auto px-4 pt-8 max-w-5xl">
+			<div class="flex flex-col lg:flex-row gap-8">
+				<article class="flex-1 min-w-0">
+					<figure class="mb-6">
+						{heroImage && <Image width={1020} height={510} src={heroImage} alt="" class="rounded-xl" />}
+					</figure>
+					
+					<div class="mb-6">
+						<div class="text-center mb-6">
+							<div class="flex flex-wrap justify-center gap-2 mb-4">
+								<div class="badge badge-outline badge-lg">
+									<FormattedDate date={pubDate} />
+								</div>
+								<div class="badge badge-outline badge-lg">
+									<ReadingTime minutes={readingTimeMinutes} />
+								</div>
+								{categories && categories.map((category: string) => (
+									<a href={`${import.meta.env.BASE_URL}/categories/${category}/`} class="badge badge-primary badge-lg hover:badge-primary-focus transition-colors">
+										{category}
+									</a>
+								))}
 							</div>
-						)
-					}
-					<h1 class="text-4xl font-bold mt-4 mb-6">{title}</h1>
-					<div class="divider"></div>
-				</div>
-				<div class="prose prose-lg max-w-none">
-					<slot />
-				</div>
+							{updatedDate && (
+								<div class="text-sm text-base-content/80 italic mb-4">
+									Last updated on <FormattedDate date={updatedDate} />
+								</div>
+							)}
+							<h1 class="text-3xl md:text-4xl font-bold mt-4 mb-6">{title}</h1>
+							<div class="divider"></div>
+						</div>
+						
+						<div class="flex justify-center mb-6">
+							<ShareButtons title={title} url={pageUrl} description={description} />
+						</div>
+						
+						<div class="prose prose-lg max-w-none">
+							<slot />
+						</div>
+					</div>
+				</article>
+				
+				<aside class="hidden lg:block w-64 flex-shrink-0">
+					<div class="sticky top-24 space-y-6">
+						<TableOfContents headings={headings} />
+					</div>
+				</aside>
 			</div>
 		</main>
+		
+		<BackToTop />
 		<Footer />
 	</body>
 </html>

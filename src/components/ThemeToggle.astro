@@ -1,0 +1,52 @@
+---
+import { Moon, Sun } from 'lucide-astro';
+---
+
+<div class="theme-toggle flex items-center">
+	<button 
+		id="theme-toggle" 
+		class="btn btn-ghost btn-circle"
+		aria-label="Toggle theme"
+	>
+		<Sun id="sun-icon" class="w-5 h-5" style="display: none;" />
+		<Moon id="moon-icon" class="w-5 h-5" />
+	</button>
+</div>
+
+<script>
+	const toggleBtn = document.getElementById('theme-toggle');
+	const sunIcon = document.getElementById('sun-icon') as HTMLElement;
+	const moonIcon = document.getElementById('moon-icon') as HTMLElement;
+	const html = document.documentElement;
+	
+	function getTheme(): string {
+		return localStorage.getItem('theme') || 'retro';
+	}
+	
+	function setTheme(theme: string): void {
+		html.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+		updateIcon(theme);
+	}
+	
+	function updateIcon(theme: string): void {
+		if (theme === 'retro-dark') {
+			sunIcon.style.display = 'block';
+			moonIcon.style.display = 'none';
+		} else {
+			sunIcon.style.display = 'none';
+			moonIcon.style.display = 'block';
+		}
+	}
+	
+	function toggleTheme(): void {
+		const currentTheme = getTheme();
+		const nextTheme = currentTheme === 'retro' ? 'retro-dark' : 'retro';
+		setTheme(nextTheme);
+	}
+	
+	const savedTheme = getTheme();
+	setTheme(savedTheme);
+	
+	toggleBtn?.addEventListener('click', toggleTheme);
+</script>

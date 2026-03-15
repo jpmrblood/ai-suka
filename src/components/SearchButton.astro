@@ -1,0 +1,97 @@
+---
+import { Search } from 'lucide-astro';
+---
+
+<button id="search-button" class="btn btn-ghost btn-circle" aria-label="Search">
+	<Search class="w-5 h-5" />
+</button>
+
+<dialog id="search-modal" class="modal">
+	<div class="modal-box max-w-2xl">
+		<div class="form-control">
+			<input 
+				id="search-input" 
+				type="text" 
+				placeholder="Search articles..." 
+				class="input input-bordered w-full text-lg"
+				autocomplete="off"
+			/>
+		</div>
+		<div id="search-results" class="mt-4 max-h-96 overflow-y-auto"></div>
+	</div>
+	<form method="dialog" class="modal-backdrop">
+		<button>close</button>
+	</form>
+</dialog>
+
+<script>
+	const searchButton = document.getElementById('search-button');
+	const searchModal = document.getElementById('search-modal') as HTMLDialogElement;
+	const searchInput = document.getElementById('search-input') as HTMLInputElement;
+	const searchResults = document.getElementById('search-results');
+
+	let searchIndex: Array<{
+		title: string;
+		description: string;
+		url: string;
+		categories: string[];
+	}> = [];
+
+	async function loadSearchIndex() {
+		try {
+			const baseUrl = document.querySelector('meta[name="base-url"]')?.getAttribute('content') || '';
+			const response = await fetch(`${baseUrl}/search-index.json`);
+			searchIndex = await response.json();
+		} catch (e) {
+			console.error('Failed to load search index', e);
+		}
+	}
+
+	function performSearch(query: string) {
+		if (!searchResults) return;
+		
+		if (!query.trim()) {
+			searchResults.innerHTML = '<p class="text-base-content/60 text-center py-4">Start typing to search...</p>';
+			return;
+		}
+
+		const lowerQuery = query.toLowerCase();
+		const results = searchIndex.filter(item => 
+			item.title.toLowerCase().includes(lowerQuery) ||
+			item.description.toLowerCase().includes(lowerQuery) ||
+			item.categories.some(cat => cat.toLowerCase().includes(lowerQuery))
+		).slice(0, 10);
+
+		if (results.length === 0) {
+			searchResults.innerHTML = '<p class="text-base-content/60 text-center py-4">No results found</p>';
+			return;
+		}
+
+		searchResults.innerHTML = results.map(item => `
+			<a href="${item.url}" class="block p-3 rounded-lg hover:bg-base-200 transition-colors">
+				<h4 class="font-semibold">${item.title}</h4>
+				<p class="text-sm text-base-content/70 line-clamp-2">${item.description}</p>
+				${item.categories.length > 0 ? `<div class="flex gap-1 mt-2">${item.categories.map(c => `<span class="badge badge-sm badge-outline">${c}</span>`).join('')}</div>` : ''}
+			</a>
+		`).join('');
+	}
+
+	searchButton?.addEventListener('click', async () => {
+		if (searchIndex.length === 0) {
+			await loadSearchIndex();
+		}
+		searchModal?.showModal();
+		setTimeout(() => searchInput?.focus(), 100);
+	});
+
+	searchInput?.addEventListener('input', (e) => {
+		performSearch((e.target as HTMLInputElement).value);
+	});
+
+	document.addEventListener('keydown', (e) => {
+		if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+			e.preventDefault();
+			searchButton?.click();
+		}
+	});
+</script>

@@ -1,0 +1,78 @@
+---
+import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-astro';
+
+interface Props {
+	title: string;
+	url: string;
+	description: string;
+}
+
+const { title, url, description } = Astro.props;
+
+const encodedTitle = encodeURIComponent(title);
+const encodedUrl = encodeURIComponent(url);
+const encodedDescription = encodeURIComponent(description);
+
+const shareLinks = {
+	twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+	facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+	linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+};
+---
+
+<div class="share-buttons flex items-center gap-2">
+	<span class="text-sm text-base-content/60 mr-2">Share:</span>
+	
+	<a 
+		href={shareLinks.twitter}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="btn btn-ghost btn-sm btn-circle"
+		aria-label="Share on Twitter"
+	>
+		<Twitter class="w-4 h-4" />
+	</a>
+	
+	<a 
+		href={shareLinks.facebook}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="btn btn-ghost btn-sm btn-circle"
+		aria-label="Share on Facebook"
+	>
+		<Facebook class="w-4 h-4" />
+	</a>
+	
+	<a 
+		href={shareLinks.linkedin}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="btn btn-ghost btn-sm btn-circle"
+		aria-label="Share on LinkedIn"
+	>
+		<Linkedin class="w-4 h-4" />
+	</a>
+	
+	<button 
+		id="copy-link"
+		class="btn btn-ghost btn-sm btn-circle"
+		aria-label="Copy link"
+	>
+		<LinkIcon class="w-4 h-4" />
+	</button>
+</div>
+
+<script>
+	const copyButton = document.getElementById('copy-link');
+	
+	copyButton?.addEventListener('click', async () => {
+		await navigator.clipboard.writeText(window.location.href);
+		
+		const originalContent = copyButton.innerHTML;
+		copyButton.innerHTML = '<span class="text-success">✓</span>';
+		
+		setTimeout(() => {
+			copyButton.innerHTML = originalContent;
+		}, 2000);
+	});
+</script>

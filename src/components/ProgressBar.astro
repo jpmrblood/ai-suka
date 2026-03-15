@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	url: string;
+}
+
+const { title, description, url } = Astro.props;
+---
+
+<div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+
+<script>
+	const progressBar = document.getElementById('progress-bar');
+	
+	function updateProgress() {
+		const scrollTop = window.scrollY;
+		const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+		const progress = (scrollTop / docHeight) * 100;
+		
+		if (progressBar) {
+			progressBar.style.width = `${Math.min(progress, 100)}%`;
+		}
+	}
+
+	window.addEventListener('scroll', updateProgress, { passive: true });
+	updateProgress();
+</script>

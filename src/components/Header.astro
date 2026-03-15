@@ -1,9 +1,40 @@
 ---
 import { SITE_TITLE } from "../consts";
+import { Menu, X } from 'lucide-astro';
+import ThemeToggle from './ThemeToggle.astro';
+import SearchButton from './SearchButton.astro';
 ---
 
-<div class="navbar bg-transparent">
-	<div class="navbar-center">
-		<h2 class="text-xl font-bold"><a href={`${import.meta.env.BASE_URL}/`}>{SITE_TITLE}</a></h2>
+<header class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
+	<div class="navbar max-w-6xl mx-auto px-4">
+		<div class="navbar-start">
+			<a href={`${import.meta.env.BASE_URL}/`} class="text-xl font-bold hover:text-primary transition-colors">
+				{SITE_TITLE}
+			</a>
+		</div>
+		
+		<div class="navbar-center hidden lg:flex">
+			<ul class="menu menu-horizontal px-1 gap-1">
+				<li><a href={`${import.meta.env.BASE_URL}/`} class="hover:text-primary">Home</a></li>
+				<li><a href={`${import.meta.env.BASE_URL}/categories/`} class="hover:text-primary">Categories</a></li>
+				<li><a href={`${import.meta.env.BASE_URL}/about`} class="hover:text-primary">About</a></li>
+			</ul>
+		</div>
+		
+		<div class="navbar-end gap-1">
+			<SearchButton />
+			<ThemeToggle />
+			
+			<div class="dropdown dropdown-end lg:hidden">
+				<div tabindex="0" role="button" class="btn btn-ghost btn-circle" aria-label="Menu">
+					<Menu class="w-5 h-5" />
+				</div>
+				<ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52">
+					<li><a href={`${import.meta.env.BASE_URL}/`}>Home</a></li>
+					<li><a href={`${import.meta.env.BASE_URL}/categories/`}>Categories</a></li>
+					<li><a href={`${import.meta.env.BASE_URL}/about`}>About</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
-</div>
+</header>

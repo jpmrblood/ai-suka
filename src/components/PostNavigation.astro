@@ -1,0 +1,51 @@
+---
+import { ArrowLeft, ArrowRight } from 'lucide-astro';
+import FormattedDate from './FormattedDate.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	prev?: CollectionEntry<'blog'>;
+	next?: CollectionEntry<'blog'>;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{(prev || next) && (
+	<nav class="post-navigation flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t border-base-300" aria-label="Post navigation">
+		{prev && (
+			<a 
+				href={`${import.meta.env.BASE_URL}/${prev.id}/`}
+				class="flex-1 p-4 rounded-xl bg-base-200 hover:bg-base-300 transition-colors group"
+			>
+				<div class="flex items-center gap-2 text-base-content/60 mb-2">
+					<ArrowLeft class="w-4 h-4" />
+					<span class="text-sm">Previous</span>
+				</div>
+				<h4 class="font-semibold group-hover:text-primary transition-colors line-clamp-2">
+					{prev.data.title}
+				</h4>
+				<p class="text-sm text-base-content/60 mt-1">
+					<FormattedDate date={prev.data.pubDate} />
+				</p>
+			</a>
+		)}
+		{next && (
+			<a 
+				href={`${import.meta.env.BASE_URL}/${next.id}/`}
+				class="flex-1 p-4 rounded-xl bg-base-200 hover:bg-base-300 transition-colors group text-right"
+			>
+				<div class="flex items-center justify-end gap-2 text-base-content/60 mb-2">
+					<span class="text-sm">Next</span>
+					<ArrowRight class="w-4 h-4" />
+				</div>
+				<h4 class="font-semibold group-hover:text-primary transition-colors line-clamp-2">
+					{next.data.title}
+				</h4>
+				<p class="text-sm text-base-content/60 mt-1">
+					<FormattedDate date={next.data.pubDate} />
+				</p>
+			</a>
+		)}
+	</nav>
+)}
