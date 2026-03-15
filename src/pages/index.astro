@@ -45,7 +45,7 @@ function getReadingTime(postId: string): number {
 		<meta name="base-url" content={import.meta.env.BASE_URL} />
 		<style>
 			.hero-container {
-				min-height: 70vh;
+				height: 100vh;
 				background-color: var(--color-base-300);
 				background-size: cover;
 				background-position: center;
@@ -69,22 +69,9 @@ function getReadingTime(postId: string): number {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				min-height: 70vh;
+				height: 100vh;
 				color: white;
-				padding: 6rem 1.5rem;
-			}
-
-			@media (min-width: 768px) {
-				.hero-container,
-				.hero-content {
-					min-height: 100vh;
-				}
-			}
-
-			@media (max-width: 768px) {
-				.hero-content {
-					padding: 5rem 1rem;
-				}
+				padding: 6rem 1.5rem 2rem;
 			}
 		</style>
 	</head>
