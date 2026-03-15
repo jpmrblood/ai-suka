@@ -35,7 +35,7 @@ function getReadingTime(postId: string): number {
 	const mdPath = path.join('./src/content/blog', `${postId}.md`);
 	const mdxPath = path.join('./src/content/blog', `${postId}.mdx`);
 	let content = '';
-	
+
 	try {
 		if (fs.existsSync(mdPath)) {
 			content = fs.readFileSync(mdPath, 'utf-8');
@@ -59,12 +59,6 @@ function getReadingTime(postId: string): number {
 		/>
 		<meta name="base-url" content={import.meta.env.BASE_URL} />
 		<style>
-			.category-container {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 0 1rem;
-			}
-
 			.category-header {
 				text-align: center;
 				margin-bottom: 3rem;
@@ -72,8 +66,8 @@ function getReadingTime(postId: string): number {
 
 			.category-badge {
 				display: inline-block;
-				background: hsl(var(--p));
-				color: hsl(var(--pc));
+				background: var(--color-primary);
+				color: var(--color-primary-content);
 				padding: 0.5rem 1.5rem;
 				border-radius: 9999px;
 				font-size: 1rem;
@@ -96,24 +90,14 @@ function getReadingTime(postId: string): number {
 				display: inline-flex;
 				align-items: center;
 				gap: 0.5rem;
-				color: hsl(var(--p));
+				color: var(--color-primary);
 				text-decoration: none;
 				margin-bottom: 2rem;
-				transition: color 0.2s ease;
+				transition: opacity 0.2s ease;
 			}
 
 			.back-link:hover {
-				opacity: 0.8;
-			}
-
-			@media (max-width: 768px) {
-				.category-container {
-					padding: 0 0.5rem;
-				}
-
-				.category-header h1 {
-					font-size: 2rem;
-				}
+				opacity: 0.7;
 			}
 		</style>
 	</head>
@@ -122,79 +106,77 @@ function getReadingTime(postId: string): number {
 		<Header />
 
 		<!-- Category Section -->
-		<main id="main-content" class="bg-base-200 py-16 min-h-screen">
-			<div class="category-container">
-				<!-- Back to categories link -->
-				<a href={`${import.meta.env.BASE_URL}/categories/`} class="back-link">
-					← Back to Categories
-				</a>
+		<main id="main-content" class="container mx-auto px-4 py-16 max-w-6xl min-h-screen">
+			<!-- Back to categories link -->
+			<a href={`${import.meta.env.BASE_URL}/categories/`} class="back-link">
+				← Back to Categories
+			</a>
 
-				<!-- Category Header -->
-				<div class="category-header">
-					<div class="category-badge">{category}</div>
-					<h1 class="text-3xl md:text-4xl font-bold mb-4">
-						{capitalizedCategory} Articles
-					</h1>
-					<p class="text-lg text-base-content/80">
-						{filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} in this category
-					</p>
-				</div>
-
-				<!-- Articles Grid -->
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{filteredPosts.map((post) => (
-						<article class="card bg-base-100 shadow-lg article-card">
-							{post.data.heroImage && (
-								<figure class="px-4 pt-4">
-									<a href={`${import.meta.env.BASE_URL}/${post.id}/`}>
-										<Image
-											width={400}
-											height={200}
-											src={post.data.heroImage}
-											alt={post.data.title}
-											class="rounded-xl w-full h-48 object-cover"
-										/>
-									</a>
-								</figure>
-							)}
-							<div class="card-body">
-								<h2 class="card-title text-xl mb-2">
-									<a href={`${import.meta.env.BASE_URL}/${post.id}/`} class="hover:text-primary transition-colors">
-										{post.data.title}
-									</a>
-								</h2>
-								<div class="flex flex-wrap gap-2 text-sm text-base-content/80 mb-3">
-									<span><FormattedDate date={post.data.pubDate} /></span>
-									<span>·</span>
-									<ReadingTime minutes={getReadingTime(post.id)} />
-								</div>
-								<p class="text-base-content/80 leading-relaxed mb-4 line-clamp-3">
-									{post.data.description}
-								</p>
-								<div class="card-actions justify-between items-center">
-									<div class="flex flex-wrap gap-1">
-										{post.data.categories?.map((cat: string) => (
-											<span class="badge badge-outline badge-sm">{cat}</span>
-										))}
-									</div>
-									<a href={`${import.meta.env.BASE_URL}/${post.id}/`} class="btn btn-primary btn-sm">
-										Read more →
-									</a>
-								</div>
-							</div>
-						</article>
-					))}
-				</div>
-
-				{filteredPosts.length === 0 && (
-					<div class="text-center py-12">
-						<p class="text-base-content/80 text-lg mb-4">No articles found in this category.</p>
-						<a href={`${import.meta.env.BASE_URL}/categories/`} class="btn btn-primary">
-							← Back to Categories
-						</a>
-					</div>
-				)}
+			<!-- Category Header -->
+			<div class="category-header">
+				<div class="category-badge">{category}</div>
+				<h1 class="text-3xl md:text-4xl font-bold mb-4">
+					{capitalizedCategory} Articles
+				</h1>
+				<p class="text-lg text-base-content/80">
+					{filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} in this category
+				</p>
 			</div>
+
+			<!-- Articles Grid -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{filteredPosts.map((post) => (
+					<article class="card bg-base-100 shadow-lg article-card">
+						{post.data.heroImage && (
+							<figure class="px-4 pt-4">
+								<a href={`${import.meta.env.BASE_URL}/${post.id}/`}>
+									<Image
+										width={400}
+										height={200}
+										src={post.data.heroImage}
+										alt={post.data.title}
+										class="rounded-xl w-full h-48 object-cover"
+									/>
+								</a>
+							</figure>
+						)}
+						<div class="card-body">
+							<h2 class="card-title text-xl mb-2">
+								<a href={`${import.meta.env.BASE_URL}/${post.id}/`} class="hover:text-primary transition-colors">
+									{post.data.title}
+								</a>
+							</h2>
+							<div class="flex flex-wrap gap-2 text-sm text-base-content/80 mb-3">
+								<span><FormattedDate date={post.data.pubDate} /></span>
+								<span>·</span>
+								<ReadingTime minutes={getReadingTime(post.id)} />
+							</div>
+							<p class="text-base-content/80 leading-relaxed mb-4 line-clamp-3">
+								{post.data.description}
+							</p>
+							<div class="card-actions justify-between items-center">
+								<div class="flex flex-wrap gap-1">
+									{post.data.categories?.map((cat: string) => (
+										<span class="badge badge-outline badge-sm">{cat}</span>
+									))}
+								</div>
+								<a href={`${import.meta.env.BASE_URL}/${post.id}/`} class="btn btn-primary btn-sm">
+									Read more
+								</a>
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+
+			{filteredPosts.length === 0 && (
+				<div class="text-center py-12">
+					<p class="text-base-content/80 text-lg mb-4">No articles found in this category.</p>
+					<a href={`${import.meta.env.BASE_URL}/categories/`} class="btn btn-primary">
+						← Back to Categories
+					</a>
+				</div>
+			)}
 		</main>
 
 		<BackToTop />
