@@ -20,6 +20,7 @@ const { headings } = Astro.props;
 				<li class={heading.depth === 3 ? 'ml-4' : ''}>
 					<a
 						href={`#${heading.slug}`}
+						data-toc-link={heading.slug}
 						class="text-base-content/70 hover:text-primary transition-colors"
 					>
 						{heading.text}
@@ -29,3 +30,49 @@ const { headings } = Astro.props;
 		</ul>
 	</nav>
 )}
+
+<script>
+	// Highlight active TOC link based on scroll position
+	document.addEventListener('DOMContentLoaded', () => {
+		const tocLinks = document.querySelectorAll('[data-toc-link]');
+		const headings = document.querySelectorAll('.prose h2[id], .prose h3[id]');
+
+		if (headings.length === 0 || tocLinks.length === 0) return;
+
+		// Create intersection observer with trigger zone near top
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					const id = entry.target.getAttribute('id');
+					const tocLink = document.querySelector(`[data-toc-link="${id}"]`);
+
+					if (entry.isIntersecting) {
+						// Remove active class from all links
+						tocLinks.forEach((link) => link.classList.remove('font-bold', 'text-primary'));
+						// Add active class to current link
+						tocLink?.classList.add('font-bold', 'text-primary');
+					}
+				});
+			},
+			{
+				// Trigger zone: top 20% of viewport (accounts for header)
+				rootMargin: '-7rem 0px -80% 0px',
+				threshold: 0,
+			}
+		);
+
+		// Observe all headings
+		headings.forEach((heading) => observer.observe(heading));
+
+		// Cleanup on page navigation
+		document.addEventListener('astro:before-swap', () => observer.disconnect());
+	});
+</script>
+
+<style is:global>
+	/* Add scroll margin to headings so they appear below the sticky header */
+	.prose h2[id],
+	.prose h3[id] {
+		scroll-margin-top: 7rem;
+	}
+</style>
