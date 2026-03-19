@@ -128,15 +128,25 @@ heroImage: "../../assets/year/month/image-name.png"
 
 #### Article Generation and Attribution
 
-When articles are generated from external sources, particularly YouTube transcripts, the following attribution guidelines must be followed:
+When articles are generated from external sources, the following attribution guidelines must be followed:
 
--   **Attribution Line:** A single line of text indicating the source and the author (Gemini).
--   **Format:** `*This article was written by [Author], based on content from: [Source URL]*`
+##### Author Format
+
+The `[Author]` field should include both the AI assistant name and its model in parentheses:
+
+-   **Format:** `AI Name (Model)`
+-   **Example:** `opencode (GLM-5)`, `Claude (Claude 3.5 Sonnet)`, `Gemini (Gemini 2.0 Flash)`
+
+##### YouTube Video Attribution
+
+When articles are based on YouTube video transcripts:
+
+-   **Format:** `*This article was written by [Author], based on content from: [YouTube URL]*`
 -   **Placement:** The attribution line must be the very last line of the article file.
 
 **Example:**
 ```markdown
-*This article was written by [Insert you, AI Assistant naming here], based on content from: https://www.youtube.com/watch?v=example-video*
+*This article was written by opencode (GLM-5), based on content from: https://www.youtube.com/watch?v=example-video*
 ```
 
 **Timeline Markdown Support**
