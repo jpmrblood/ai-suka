@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8D46E7"/>
+      <stop offset="100%" style="stop-color:#5B21B6"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF5D01"/>
+      <stop offset="100%" style="stop-color:#FF8C42"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.1" stroke="#8D46E7" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Floating particles -->
+  <circle cx="100" cy="150" r="3" fill="#8D46E7" opacity="0.6"/>
+  <circle cx="250" cy="80" r="2" fill="#FF5D01" opacity="0.5"/>
+  <circle cx="950" cy="120" r="4" fill="#8D46E7" opacity="0.4"/>
+  <circle cx="1100" cy="200" r="2" fill="#FF5D01" opacity="0.6"/>
+  <circle cx="150" cy="500" r="3" fill="#8D46E7" opacity="0.5"/>
+  <circle cx="1050" cy="450" r="2" fill="#8D46E7" opacity="0.6"/>
+  <circle cx="300" cy="550" r="2" fill="#FF5D01" opacity="0.4"/>
+
+  <!-- Left side: Code/terminal representation -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="320" height="200" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <!-- Terminal dots -->
+    <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
+    <circle cx="40" cy="18" r="6" fill="#ffbd2e"/>
+    <circle cx="60" cy="18" r="6" fill="#27ca40"/>
+    <!-- Code lines -->
+    <text x="15" y="55" font-family="JetBrains Mono, monospace" font-size="12" fill="#8D46E7">import</text>
+    <text x="65" y="55" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9"> { defineConfig }</text>
+    <text x="15" y="75" font-family="JetBrains Mono, monospace" font-size="12" fill="#8D46E7">from</text>
+    <text x="50" y="75" font-family="JetBrains Mono, monospace" font-size="12" fill="#a5d6ff">'astro/config'</text>
+    <text x="15" y="100" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9">export</text>
+    <text x="65" y="100" font-family="JetBrains Mono, monospace" font-size="12" fill="#8D46E7">default</text>
+    <text x="120" y="100" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9">defineConfig({</text>
+    <text x="25" y="120" font-family="JetBrains Mono, monospace" font-size="12" fill="#79c0ff">experimental</text>
+    <text x="110" y="120" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9">: {</text>
+    <text x="35" y="140" font-family="JetBrains Mono, monospace" font-size="12" fill="#79c0ff">rustCompiler</text>
+    <text x="140" y="140" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9">:</text>
+    <text x="150" y="140" font-family="JetBrains Mono, monospace" font-size="12" fill="#7ee787">true</text>
+    <text x="25" y="160" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9">}</text>
+    <text x="15" y="180" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9">})</text>
+  </g>
+
+  <!-- Center: Big "6" with Astro rocket -->
+  <g transform="translate(580, 280)" filter="url(#softGlow)">
+    <!-- Giant 6 -->
+    <text x="-60" y="80" font-family="Inter, system-ui, sans-serif" font-size="220" font-weight="800" fill="url(#purple)" opacity="0.9">6</text>
+  </g>
+
+  <!-- Astro Logo (simplified rocket) -->
+  <g transform="translate(460, 180)" filter="url(#glow)">
+    <!-- Rocket body -->
+    <path d="M60 0 C60 0 100 40 100 100 L100 140 L60 160 L20 140 L20 100 C20 40 60 0 60 0Z" fill="url(#purple)"/>
+    <!-- Window -->
+    <circle cx="60" cy="70" r="20" fill="#1a1a2e" stroke="#fff" stroke-width="2"/>
+    <!-- Fins -->
+    <path d="M20 100 L0 130 L20 140Z" fill="url(#orange)"/>
+    <path d="M100 100 L120 130 L100 140Z" fill="url(#orange)"/>
+    <!-- Flame -->
+    <path d="M40 160 C40 180 50 200 60 220 C70 200 80 180 80 160Z" fill="url(#orange)" opacity="0.9"/>
+    <path d="M48 160 C48 175 54 190 60 205 C66 190 72 175 72 160Z" fill="#FFE066"/>
+  </g>
+
+  <!-- Right side: Feature badges -->
+  <g transform="translate(850, 140)">
+    <!-- Badge 1 -->
+    <rect x="0" y="0" width="280" height="45" rx="6" fill="#1e1e2e" stroke="#8D46E7" stroke-width="1"/>
+    <circle cx="25" cy="22" r="10" fill="#8D46E7"/>
+    <text x="45" y="27" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff">Vite Environment API</text>
+
+    <!-- Badge 2 -->
+    <rect x="0" y="60" width="280" height="45" rx="6" fill="#1e1e2e" stroke="#FF5D01" stroke-width="1"/>
+    <circle cx="25" cy="82" r="10" fill="#FF5D01"/>
+    <text x="45" y="87" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff">Real Runtime Execution</text>
+
+    <!-- Badge 3 -->
+    <rect x="0" y="120" width="280" height="45" rx="6" fill="#1e1e2e" stroke="#7ee787" stroke-width="1"/>
+    <circle cx="25" cy="142" r="10" fill="#7ee787"/>
+    <text x="45" y="147" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff">Live Content Collections</text>
+
+    <!-- Badge 4 -->
+    <rect x="0" y="180" width="280" height="45" rx="6" fill="#1e1e2e" stroke="#79c0ff" stroke-width="1"/>
+    <circle cx="25" cy="202" r="10" fill="#79c0ff"/>
+    <text x="45" y="207" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff">Node.js 22 / Zod 4 / Vite 7</text>
+  </g>
+
+  <!-- Title text -->
+  <text x="600" y="520" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="700" fill="#fff" text-anchor="middle">Astro 6</text>
+  <text x="600" y="565" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#a0a0a0" text-anchor="middle">Dev Server Redesign &amp; Breaking Changes</text>
+
+  <!-- Version badge -->
+  <rect x="540" y="580" width="120" height="28" rx="14" fill="url(#purple)"/>
+  <text x="600" y="599" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">March 10, 2026</text>
+
+  <!-- Speed lines behind rocket -->
+  <g opacity="0.3">
+    <line x1="320" y1="260" x2="400" y2="260" stroke="url(#orange)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="310" y1="280" x2="420" y2="280" stroke="url(#orange)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="320" y1="300" x2="400" y2="300" stroke="url(#orange)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
