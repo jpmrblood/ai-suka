@@ -31,42 +31,71 @@ const { headings } = Astro.props;
 	</nav>
 )}
 
-<script>
+<script is:inline>
 	// Highlight active TOC link based on scroll position
-	document.addEventListener('DOMContentLoaded', () => {
-		const tocLinks = document.querySelectorAll('[data-toc-link]');
-		const headings = document.querySelectorAll('.prose h2[id], .prose h3[id]');
+	(function() {
+		var observer = null;
 
-		if (headings.length === 0 || tocLinks.length === 0) return;
-
-		// Create intersection observer with trigger zone near top
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					const id = entry.target.getAttribute('id');
-					const tocLink = document.querySelector(`[data-toc-link="${id}"]`);
-
-					if (entry.isIntersecting) {
-						// Remove active class from all links
-						tocLinks.forEach((link) => link.classList.remove('font-bold', 'text-primary'));
-						// Add active class to current link
-						tocLink?.classList.add('font-bold', 'text-primary');
-					}
-				});
-			},
-			{
-				// Trigger zone: top 20% of viewport (accounts for header)
-				rootMargin: '-7rem 0px -80% 0px',
-				threshold: 0,
+		function initTocHighlight() {
+			// Disconnect existing observer
+			if (observer) {
+				observer.disconnect();
 			}
-		);
 
-		// Observe all headings
-		headings.forEach((heading) => observer.observe(heading));
+			var tocLinks = document.querySelectorAll('[data-toc-link]');
+			var headings = document.querySelectorAll('.prose h2[id], .prose h3[id]');
+
+			if (headings.length === 0 || tocLinks.length === 0) return;
+
+			// Create intersection observer with trigger zone near top
+			observer = new IntersectionObserver(
+				function(entries) {
+					entries.forEach(function(entry) {
+						var id = entry.target.getAttribute('id');
+						var tocLink = document.querySelector('[data-toc-link="' + id + '"]');
+
+						if (entry.isIntersecting) {
+							// Remove active class from all links
+							tocLinks.forEach(function(link) {
+								link.classList.remove('font-bold', 'text-primary');
+							});
+							// Add active class to current link
+							if (tocLink) {
+								tocLink.classList.add('font-bold', 'text-primary');
+							}
+						}
+					});
+				},
+				{
+					rootMargin: '-7rem 0px -80% 0px',
+					threshold: 0,
+				}
+			);
+
+			// Observe all headings
+			headings.forEach(function(heading) {
+				observer.observe(heading);
+			});
+		}
+
+		// Run when DOM is ready
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initTocHighlight);
+		} else {
+			initTocHighlight();
+		}
+
+		// Re-run on Astro view transitions
+		document.addEventListener('astro:page-load', initTocHighlight);
 
 		// Cleanup on page navigation
-		document.addEventListener('astro:before-swap', () => observer.disconnect());
-	});
+		document.addEventListener('astro:before-swap', function() {
+			if (observer) {
+				observer.disconnect();
+				observer = null;
+			}
+		});
+	})();
 </script>
 
 <style is:global>
